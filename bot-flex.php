@@ -1,7 +1,7 @@
 <?php
 
 
-$API_URL = 'https://api.line.me/v2/bot/message';
+$API_URL = 'https://api.line.me/v2/bot/message/reply';
 $ACCESS_TOKEN = 'viahgF0U1r8cCxs6JmmQeClrBHE3Sng0L2eDKKGhIV5vv/i+Vl+Up9eooWqor+ABRue6wumafsXliuy7VRjo9trjdcPmFLcLggrp3A2SOBm4L1asIjUTVtJaiR9dCcL6pkF6nsZQBJRI90N6aZdXigdB04t89/1O/w1cDnyilFU='; 
 $channelSecret = '8efdfa82f3fa7f1e0ee974a83b5c6e05';
 
