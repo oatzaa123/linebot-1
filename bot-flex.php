@@ -12,66 +12,78 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
 $jsonFlex = [
-  "type" => "flex",
-    "altText" => "Hello Flex Message",
-    "contents" => [
+  'type' => 'flex',
+  'altText' => 'Flex Message',
+  'contents' => 
+  [
+    'type' => 'bubble',
+    'direction' => 'ltr',
+    'hero' => 
+    [
+      'type' => 'image',
+      'url' => 'https://sv1.picz.in.th/images/2019/10/31/gwaFqv.md.jpg',
+      'size' => 'full',
+      'aspectRatio' => '20:13',
+      'aspectMode' => 'cover',
+    ),
+    'body' => 
+    [
+      'type' => 'box',
+      'layout' => 'vertical',
+      'spacing' => 'sm',
+      'contents' => 
       [
-      "type" => "bubble",
-      "direction" => "ltr",
-      "hero" => [
-      "type" => "image",
-      "url" => "https://sv1.picz.in.th/images/2019/10/31/gwaFqv.md.jpg",
-      "size" => "full",
-      "aspectRatio" => "20:13",
-      "aspectMode" => "cover"
-    ],
-      "body" => [
-      "type" => "box",
-      "layout" => "vertical",
-      "spacing" => "sm",
-      "contents" => [
+        0 => 
         [
-          "type" => "text",
-          "text" => "T-Shirt, Gray",
-          "size" => "xl",
-          "align" => "center",
-          "gravity" => "center",
-          "weight" => "bold",
-          "wrap" => true
-        ],
+          'type' => 'text',
+          'text' => 'T-Shirt, Gray',
+          'size' => 'xl',
+          'align' => 'center',
+          'gravity' => 'center',
+          'weight' => 'bold',
+          'wrap' => true,
+        ),
+        1 => 
         [
-          "type" => "box",
-          "layout" => "baseline",
-          "contents" => [
-              "type" => "text",
-              "text" => "199 Bath",
-              "size" => "xl",
-              "align" => "center",
-              "weight" => "bold",
-              "wrap" => true
-          ]
-        ]
-      ]
-    ],
-      "footer" => [
-        "type" => "box",
-        "layout" => "vertical",
-        "spacing"=> "sm",
-        "contents" => [
+          'type' => 'box',
+          'layout' => 'baseline',
+          'contents' => 
           [
-            "type" => "button",
-            "action" => [
-            "type" => "uri",
-            "label" => "Details",
-            "uri" => "https://linecorp.com"
+            0 => 
+            [
+              'type' => 'text',
+              'text' => '199 Bath',
+              'size' => 'xl',
+              'align' => 'center',
+              'weight' => 'bold',
+              'wrap' => true,
+            ],
           ],
-          "style" => "primary"
-            ]
-          ]
-        ]
-      ]
-    ]
-  ];
+        ],
+      ],
+    ],
+    'footer' => 
+    [
+      'type' => 'box',
+      'layout' => 'vertical',
+      'spacing' => 'sm',
+      'contents' => 
+      [
+        0 => 
+        [
+          'type' => 'button',
+          'action' => 
+          [
+            'type' => 'uri',
+            'label' => 'Details',
+            'uri' => 'https://linecorp.com',
+          ],
+          'style' => 'primary',
+        ],
+      ],
+    ],
+  ],
+];
 
 
 
