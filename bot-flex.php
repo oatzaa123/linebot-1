@@ -15,6 +15,7 @@ $jsonFlex = [
   "type" => "flex",
     "altText" => "Hello Flex Message",
     "contents" => [
+      [
       "type" => "bubble",
       "direction" => "ltr",
       "hero" => [
@@ -55,7 +56,7 @@ $jsonFlex = [
       "footer" => [
         "type" => "box",
         "layout" => "vertical",
-        "spacing": "sm",
+        "spacing"=> "sm",
         "contents" => [
           [
             "type" => "button",
