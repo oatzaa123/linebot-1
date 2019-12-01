@@ -25,7 +25,7 @@ $jsonFlex = [
       'size' => 'full',
       'aspectRatio' => '20:13',
       'aspectMode' => 'cover',
-    ),
+    ],
     'body' => 
     [
       'type' => 'box',
@@ -42,7 +42,7 @@ $jsonFlex = [
           'gravity' => 'center',
           'weight' => 'bold',
           'wrap' => true,
-        ),
+        ],
         1 => 
         [
           'type' => 'box',
