@@ -76,7 +76,7 @@ $jsonFlex = [
           [
             'type' => 'uri',
             'label' => 'Details',
-            'uri' => 'https://linecorp.com',
+            'uri' => 'line://app/1653550371-lm6xDb7g',
           ],
           'style' => 'primary',
         ],
