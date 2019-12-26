@@ -90,7 +90,7 @@ $jsonFlex = [
 $firestore = new FirestoreClient();
 
 $collectionReference = $firestore->collection('Flex message');
-$documentReference = $collectionReference->document($001);
+$documentReference = $collectionReference->document($Text);
 $snapshot = $documentReference->snapshot();
 
 echo "Hello " . $snapshot['Text'];
