@@ -63,7 +63,7 @@ $jsonFlex = [
                                        "action" => [
                                           "type" => "uri", 
                                           "label" => "Details", 
-                                          "uri" => "https://linecorp.com" 
+                                          "uri" => "line://app/1653550371-4xE9RGW2" 
                                        ], 
                                        "style" => "primary" 
                                     ] 
