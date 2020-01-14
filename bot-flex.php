@@ -134,23 +134,59 @@ $jsonFlex = [
                                                 ], 
             [
                                                                                        "type" => "bubble", 
+                                                                                       "hero" => [
+                                                                                          "type" => "image", 
+                                                                                          "url" => "https://sv1.picz.in.th/images/2020/01/14/Ri093Q.jpg", 
+                                                                                          "size" => "full", 
+                                                                                          "aspectRatio" => "20:13", 
+                                                                                          "aspectMode" => "cover", 
+                                                                                          "backgroundColor" => "#FFFFFF" 
+                                                                                       ], 
                                                                                        "body" => [
-                                                                                          "type" => "box", 
-                                                                                          "layout" => "vertical", 
-                                                                                          "spacing" => "sm", 
-                                                                                          "contents" => [
-                                                                                             [
-                                                                                                "type" => "button", 
-                                                                                                "action" => [
-                                                                                                   "type" => "uri", 
-                                                                                                   "label" => "See more", 
-                                                                                                   "uri" => "https://linecorp.com" 
+                                                                                             "type" => "box", 
+                                                                                             "layout" => "vertical", 
+                                                                                             "spacing" => "sm", 
+                                                                                             "contents" => [
+                                                                                                [
+                                                                                                   "type" => "box", 
+                                                                                                   "layout" => "vertical", 
+                                                                                                   "contents" => [
+                                                                                                      [
+                                                                                                         "type" => "text", 
+                                                                                                         "text" => "Sleeved Shirt , Black", 
+                                                                                                         "size" => "xl", 
+                                                                                                         "align" => "center", 
+                                                                                                         "weight" => "bold" 
+                                                                                                      ] 
+                                                                                                   ] 
                                                                                                 ], 
-                                                                                                "flex" => 1, 
-                                                                                                "gravity" => "center" 
+                                                                                                [
+                                                                                                            "type" => "text", 
+                                                                                                            "text" => "275 Bath", 
+                                                                                                            "size" => "xl", 
+                                                                                                            "align" => "center", 
+                                                                                                            "weight" => "bold" 
+                                                                                                         ] 
                                                                                              ] 
-                                                                                          ] 
-                                                                                       ] 
+                                                                                          ], 
+                                                                                       "footer" => [
+                                                                                                               "type" => "box", 
+                                                                                                               "layout" => "horizontal", 
+                                                                                                               "flex" => 1, 
+                                                                                                               "contents" => [
+                                                                                                                  [
+                                                                                                                     "type" => "button", 
+                                                                                                                     "action" => [
+                                                                                                                        "type" => "uri", 
+                                                                                                                        "label" => "Button", 
+                                                                                                                        "uri" => "line://app/1653550371-y5nGjkMW" 
+                                                                                                                     ], 
+                                                                                                                     "flex" => 1, 
+                                                                                                                     "color" => "#00E00C", 
+                                                                                                                     "style" => "primary" 
+                                                                                                                  ] 
+                                                                                                               ] 
+                                                                                                            ] 
                                                                                     ] 
          ] 
       ] 
