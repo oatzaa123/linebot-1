@@ -155,10 +155,6 @@ $jsonFlex = [
          ] 
       ] 
 ]; 
- 
-  
-]; 
-
 
 if ( sizeof($request_array['events']) > 0 ) {
     foreach ($request_array['events'] as $event) {
@@ -169,7 +165,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 
         $data = [
             'replyToken' => $reply_token,
-            'messages' => [$jsonFlex,$jayParsedAry]
+            'messages' => [$jsonFlex]
         ];
 
         print_r($data);
