@@ -77,7 +77,7 @@ $jsonFlex = [
             [
                                                    "type" => "bubble", 
                                                    "hero" => [
-                                                      "type" => "image", 
+                                                      "type" => "Flex", 
                                                       "url" => "https://sv1.picz.in.th/images/2020/01/11/RwbPqt.jpg", 
                                                       "size" => "full", 
                                                       "aspectRatio" => "20:13", 
@@ -135,7 +135,7 @@ $jsonFlex = [
             [
                                                                                        "type" => "bubble", 
                                                                                        "hero" => [
-                                                                                          "type" => "image", 
+                                                                                          "type" => "Flex", 
                                                                                           "url" => "https://sv1.picz.in.th/images/2020/01/14/Ri093Q.jpg", 
                                                                                           "size" => "full", 
                                                                                           "aspectRatio" => "20:13", 
