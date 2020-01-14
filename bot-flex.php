@@ -11,127 +11,155 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
 $jsonFlex = [
-  "type" => "flex", 
-   "altText" => "Flex Message", 
-   "contents" => [
-         "type" => "bubble", 
-         "direction" => "ltr", 
-         "hero" => [
-            "type" => "image", 
-            "url" => "https://sv1.picz.in.th/images/2020/01/11/RwbPqt.jpg", 
-            "size" => "full", 
-            "aspectRatio" => "20:13", 
-            "aspectMode" => "cover" 
-         ], 
-         "body" => [
-               "type" => "box", 
-               "layout" => "vertical", 
-               "spacing" => "sm", 
-               "contents" => [
-                  [
-                     "type" => "text", 
-                     "text" => "Hat with a rope , Red", 
-                     "size" => "xl", 
-                     "align" => "center", 
-                     "gravity" => "center", 
-                     "weight" => "bold", 
-                     "wrap" => true 
-                  ], 
-                  [
-                        "type" => "box", 
-                        "layout" => "baseline", 
-                        "contents" => [
-                           [
-                              "type" => "text", 
-                              "text" => "250 Bath", 
-                              "size" => "xl", 
-                              "align" => "center", 
-                              "weight" => "bold", 
-                              "wrap" => true 
-                           ] 
-                        ] 
-                     ] 
-               ] 
-            ], 
-         "footer" => [
-                                 "type" => "box", 
-                                 "layout" => "vertical", 
-                                 "spacing" => "sm", 
-                                 "contents" => [
-                                    [
-                                       "type" => "button", 
-                                       "action" => [
-                                          "type" => "uri", 
-                                          "label" => "Details", 
-                                          "uri" => "line://app/1653550371-4xE9RGW2" 
-                                       ], 
-                                       "style" => "primary" 
-                                    ] 
-                                 ] 
-                              ] 
-      ] 
-]; 
+  <?php 
 
  $jayParsedAry = [
    "type" => "flex", 
    "altText" => "Flex Message", 
    "contents" => [
-         "type" => "bubble", 
-         "direction" => "ltr", 
-         "hero" => [
-            "type" => "image", 
-            "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
-            "size" => "full", 
-            "aspectRatio" => "20:13", 
-            "aspectMode" => "cover" 
-         ], 
-         "body" => [
-               "type" => "box", 
-               "layout" => "vertical", 
-               "spacing" => "sm", 
-               "contents" => [
-                  [
-                     "type" => "text", 
-                     "text" => "Jeans , Denim color", 
-                     "size" => "xl", 
-                     "align" => "center", 
-                     "gravity" => "center", 
-                     "weight" => "bold", 
-                     "wrap" => true 
-                  ], 
-                  [
-                        "type" => "box", 
-                        "layout" => "baseline", 
-                        "contents" => [
-                           [
-                              "type" => "text", 
-                              "text" => "500 Bath", 
-                              "size" => "xl", 
-                              "align" => "center", 
-                              "weight" => "bold", 
-                              "wrap" => true 
-                           ] 
-                        ] 
-                     ] 
-               ] 
-            ], 
-         "footer" => [
-                                 "type" => "box", 
-                                 "layout" => "vertical", 
-                                 "spacing" => "sm", 
-                                 "contents" => [
-                                    [
-                                       "type" => "button", 
-                                       "action" => [
-                                          "type" => "uri", 
-                                          "label" => "Details", 
-                                          "uri" => "https://linecorp.com" 
-                                       ], 
-                                       "style" => "primary" 
-                                    ] 
+         "type" => "carousel", 
+         "contents" => [
+            [
+               "type" => "bubble", 
+               "direction" => "ltr", 
+               "hero" => [
+                  "type" => "image", 
+                  "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+                  "size" => "full", 
+                  "aspectRatio" => "20:13", 
+                  "aspectMode" => "cover" 
+               ], 
+               "body" => [
+                     "type" => "box", 
+                     "layout" => "vertical", 
+                     "spacing" => "sm", 
+                     "contents" => [
+                        [
+                           "type" => "text", 
+                           "text" => "Jeans , Denim color", 
+                           "size" => "xl", 
+                           "align" => "center", 
+                           "gravity" => "center", 
+                           "weight" => "bold", 
+                           "wrap" => true 
+                        ], 
+                        [
+                              "type" => "box", 
+                              "layout" => "baseline", 
+                              "contents" => [
+                                 [
+                                    "type" => "text", 
+                                    "text" => "500 Bath", 
+                                    "size" => "xl", 
+                                    "align" => "center", 
+                                    "weight" => "bold", 
+                                    "wrap" => true 
                                  ] 
                               ] 
+                           ] 
+                     ] 
+                  ], 
+               "footer" => [
+                                       "type" => "box", 
+                                       "layout" => "vertical", 
+                                       "spacing" => "sm", 
+                                       "contents" => [
+                                          [
+                                             "type" => "button", 
+                                             "action" => [
+                                                "type" => "uri", 
+                                                "label" => "Details", 
+                                                "uri" => "https://linecorp.com" 
+                                             ], 
+                                             "color" => "#00E00C", 
+                                             "style" => "primary" 
+                                          ] 
+                                       ] 
+                                    ] 
+            ], 
+            [
+                                                   "type" => "bubble", 
+                                                   "hero" => [
+                                                      "type" => "image", 
+                                                      "url" => "https://sv1.picz.in.th/images/2020/01/11/RwbPqt.jpg", 
+                                                      "size" => "full", 
+                                                      "aspectRatio" => "20:13", 
+                                                      "aspectMode" => "cover" 
+                                                   ], 
+                                                   "body" => [
+                                                         "type" => "box", 
+                                                         "layout" => "vertical", 
+                                                         "spacing" => "sm", 
+                                                         "contents" => [
+                                                            [
+                                                               "type" => "text", 
+                                                               "text" => "Hat with a rape , Red", 
+                                                               "size" => "xl", 
+                                                               "align" => "center", 
+                                                               "weight" => "bold", 
+                                                               "wrap" => true 
+                                                            ], 
+                                                            [
+                                                                  "type" => "box", 
+                                                                  "layout" => "baseline", 
+                                                                  "contents" => [
+                                                                     [
+                                                                        "type" => "text", 
+                                                                        "text" => "250 Bath", 
+                                                                        "size" => "xl", 
+                                                                        "align" => "center", 
+                                                                        "gravity" => "center", 
+                                                                        "weight" => "bold", 
+                                                                        "wrap" => true 
+                                                                     ] 
+                                                                  ] 
+                                                               ] 
+                                                         ] 
+                                                      ], 
+                                                   "footer" => [
+                                                                           "type" => "box", 
+                                                                           "layout" => "vertical", 
+                                                                           "spacing" => "sm", 
+                                                                           "contents" => [
+                                                                              [
+                                                                                 "type" => "button", 
+                                                                                 "action" => [
+                                                                                    "type" => "uri", 
+                                                                                    "label" => "Details", 
+                                                                                    "uri" => "https://linecorp.com" 
+                                                                                 ], 
+                                                                                 "flex" => 1, 
+                                                                                 "color" => "#00E00C", 
+                                                                                 "style" => "primary" 
+                                                                              ] 
+                                                                           ] 
+                                                                        ] 
+                                                ], 
+            [
+                                                                                       "type" => "bubble", 
+                                                                                       "body" => [
+                                                                                          "type" => "box", 
+                                                                                          "layout" => "vertical", 
+                                                                                          "spacing" => "sm", 
+                                                                                          "contents" => [
+                                                                                             [
+                                                                                                "type" => "button", 
+                                                                                                "action" => [
+                                                                                                   "type" => "uri", 
+                                                                                                   "label" => "See more", 
+                                                                                                   "uri" => "https://linecorp.com" 
+                                                                                                ], 
+                                                                                                "flex" => 1, 
+                                                                                                "gravity" => "center" 
+                                                                                             ] 
+                                                                                          ] 
+                                                                                       ] 
+                                                                                    ] 
+         ] 
       ] 
+]; 
+ 
+  
 ]; 
 
 
