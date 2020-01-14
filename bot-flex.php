@@ -72,6 +72,68 @@ $jsonFlex = [
       ] 
 ]; 
 
+ $jayParsedAry = [
+   "type" => "flex", 
+   "altText" => "Flex Message", 
+   "contents" => [
+         "type" => "bubble", 
+         "direction" => "ltr", 
+         "hero" => [
+            "type" => "image", 
+            "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+            "size" => "full", 
+            "aspectRatio" => "20:13", 
+            "aspectMode" => "cover" 
+         ], 
+         "body" => [
+               "type" => "box", 
+               "layout" => "vertical", 
+               "spacing" => "sm", 
+               "contents" => [
+                  [
+                     "type" => "text", 
+                     "text" => "Jeans , Denim color", 
+                     "size" => "xl", 
+                     "align" => "center", 
+                     "gravity" => "center", 
+                     "weight" => "bold", 
+                     "wrap" => true 
+                  ], 
+                  [
+                        "type" => "box", 
+                        "layout" => "baseline", 
+                        "contents" => [
+                           [
+                              "type" => "text", 
+                              "text" => "500 Bath", 
+                              "size" => "xl", 
+                              "align" => "center", 
+                              "weight" => "bold", 
+                              "wrap" => true 
+                           ] 
+                        ] 
+                     ] 
+               ] 
+            ], 
+         "footer" => [
+                                 "type" => "box", 
+                                 "layout" => "vertical", 
+                                 "spacing" => "sm", 
+                                 "contents" => [
+                                    [
+                                       "type" => "button", 
+                                       "action" => [
+                                          "type" => "uri", 
+                                          "label" => "Details", 
+                                          "uri" => "https://linecorp.com" 
+                                       ], 
+                                       "style" => "primary" 
+                                    ] 
+                                 ] 
+                              ] 
+      ] 
+]; 
+
 
 if ( sizeof($request_array['events']) > 0 ) {
     foreach ($request_array['events'] as $event) {
@@ -82,7 +144,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 
         $data = [
             'replyToken' => $reply_token,
-            'messages' => [$jsonFlex]
+            'messages' => [$jsonFlex,$jayParsedAry]
         ];
 
         print_r($data);
