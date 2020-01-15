@@ -10,6 +10,31 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
+ $jayParsedAry = [
+   "type" => "flex", 
+   "altText" => "Flex Message", 
+   "contents" => [
+         "type" => "bubble", 
+         "direction" => "ltr", 
+         "body" => [
+            "type" => "box", 
+            "layout" => "vertical", 
+            "contents" => [
+               [
+                  "type" => "text", 
+                  "text" => "รายการสินค้าใหม่ประจำเดือน", 
+                  "size" => "lg", 
+                  "align" => "center", 
+                  "gravity" => "center", 
+                  "weight" => "regular", 
+                  "color" => "#00FABF" 
+               ] 
+            ] 
+         ] 
+      ] 
+]; 
+ 
+ 
 $jsonFlex = [
    "type" => "flex", 
    "altText" => "Flex Message", 
@@ -201,7 +226,7 @@ if ( sizeof($request_array['events']) > 0 ) {
 
         $data = [
             'replyToken' => $reply_token,
-            'messages' => [$jsonFlex]
+            'messages' => [$jayParsedAry,$jsonFlex]
         ];
 
         print_r($data);
