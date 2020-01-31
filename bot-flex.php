@@ -46,176 +46,189 @@ $jsonFlex = [
                "direction" => "ltr", 
                "hero" => [
                   "type" => "image", 
-                  "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+                  "url" => "https://sv1.picz.in.th/images/2020/02/01/RFgAnD.jpg", 
+                  "align" => "center", 
+                  "gravity" => "center", 
                   "size" => "full", 
-                  "aspectRatio" => "20:13", 
+                  "aspectRatio" => "3:4", 
                   "aspectMode" => "cover" 
-               ], 
-               "body" => [
-                     "type" => "box", 
-                     "layout" => "vertical", 
-                     "spacing" => "sm", 
-                     "contents" => [
-                        [
-                           "type" => "text", 
-                           "text" => "Jeans , Denim color", 
-                           "size" => "xl", 
-                           "align" => "center", 
-                           "gravity" => "center", 
-                           "weight" => "bold", 
-                           "wrap" => true 
-                        ], 
-                        [
-                              "type" => "box", 
-                              "layout" => "baseline", 
-                              "contents" => [
-                                 [
-                                    "type" => "text", 
-                                    "text" => "500 Bath", 
-                                    "size" => "xl", 
-                                    "align" => "center", 
-                                    "weight" => "bold", 
-                                    "wrap" => true 
-                                 ] 
-                              ] 
-                           ] 
-                     ] 
-                  ], 
-               "footer" => [
-                                       "type" => "box", 
-                                       "layout" => "vertical", 
-                                       "spacing" => "sm", 
-                                       "contents" => [
-                                          [
-                                             "type" => "button", 
-                                             "action" => [
-                                                "type" => "uri", 
-                                                "label" => "Details", 
-                                                "uri" => "line://app/1653550371-qMbVE2kR" 
-                                             ], 
-                                             "color" => "#00E00C", 
-                                             "style" => "primary" 
-                                          ] 
-                                       ] 
-                                    ] 
+               ] 
             ], 
             [
-                                                   "type" => "bubble", 
-                                                   "hero" => [
-                                                      "type" => "image", 
-                                                      "url" => "https://sv1.picz.in.th/images/2020/01/11/RwbPqt.jpg", 
-                                                      "size" => "full", 
-                                                      "aspectRatio" => "20:13", 
-                                                      "aspectMode" => "cover" 
+                     "type" => "bubble", 
+                     "direction" => "ltr", 
+                     "hero" => [
+                        "type" => "image", 
+                        "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+                        "size" => "full", 
+                        "aspectRatio" => "20:13", 
+                        "aspectMode" => "cover" 
+                     ], 
+                     "body" => [
+                           "type" => "box", 
+                           "layout" => "vertical", 
+                           "spacing" => "sm", 
+                           "contents" => [
+                              [
+                                 "type" => "text", 
+                                 "text" => "Jeans , Denim color", 
+                                 "size" => "xl", 
+                                 "align" => "center", 
+                                 "gravity" => "center", 
+                                 "weight" => "bold", 
+                                 "wrap" => true 
+                              ], 
+                              [
+                                    "type" => "box", 
+                                    "layout" => "baseline", 
+                                    "contents" => [
+                                       [
+                                          "type" => "text", 
+                                          "text" => "500 Bath", 
+                                          "size" => "xl", 
+                                          "align" => "center", 
+                                          "weight" => "bold", 
+                                          "wrap" => true 
+                                       ] 
+                                    ] 
+                                 ] 
+                           ] 
+                        ], 
+                     "footer" => [
+                                             "type" => "box", 
+                                             "layout" => "vertical", 
+                                             "spacing" => "sm", 
+                                             "contents" => [
+                                                [
+                                                   "type" => "button", 
+                                                   "action" => [
+                                                      "type" => "uri", 
+                                                      "label" => "Details", 
+                                                      "uri" => "https://linecorp.com" 
                                                    ], 
-                                                   "body" => [
-                                                         "type" => "box", 
-                                                         "layout" => "vertical", 
-                                                         "spacing" => "sm", 
-                                                         "contents" => [
-                                                            [
-                                                               "type" => "text", 
-                                                               "text" => "Hat with a rape , Red", 
-                                                               "size" => "xl", 
-                                                               "align" => "center", 
-                                                               "weight" => "bold", 
-                                                               "wrap" => true 
-                                                            ], 
-                                                            [
-                                                                  "type" => "box", 
-                                                                  "layout" => "baseline", 
-                                                                  "contents" => [
-                                                                     [
-                                                                        "type" => "text", 
-                                                                        "text" => "250 Bath", 
-                                                                        "size" => "xl", 
-                                                                        "align" => "center", 
-                                                                        "gravity" => "center", 
-                                                                        "weight" => "bold", 
-                                                                        "wrap" => true 
-                                                                     ] 
-                                                                  ] 
-                                                               ] 
-                                                         ] 
-                                                      ], 
-                                                   "footer" => [
-                                                                           "type" => "box", 
-                                                                           "layout" => "vertical", 
-                                                                           "spacing" => "sm", 
-                                                                           "contents" => [
-                                                                              [
-                                                                                 "type" => "button", 
-                                                                                 "action" => [
-                                                                                    "type" => "uri", 
-                                                                                    "label" => "Details", 
-                                                                                    "uri" => "line://app/1653550371-4xE9RGW2" 
-                                                                                 ], 
-                                                                                 "flex" => 1, 
-                                                                                 "color" => "#00E00C", 
-                                                                                 "style" => "primary" 
-                                                                              ] 
+                                                   "color" => "#00E00C", 
+                                                   "style" => "primary" 
+                                                ] 
+                                             ] 
+                                          ] 
+                  ], 
+            [
+                                                         "type" => "bubble", 
+                                                         "hero" => [
+                                                            "type" => "image", 
+                                                            "url" => "https://sv1.picz.in.th/images/2020/01/11/RwbPqt.jpg", 
+                                                            "size" => "full", 
+                                                            "aspectRatio" => "20:13", 
+                                                            "aspectMode" => "cover" 
+                                                         ], 
+                                                         "body" => [
+                                                               "type" => "box", 
+                                                               "layout" => "vertical", 
+                                                               "spacing" => "sm", 
+                                                               "contents" => [
+                                                                  [
+                                                                     "type" => "text", 
+                                                                     "text" => "Hat with a rape , Red", 
+                                                                     "size" => "xl", 
+                                                                     "align" => "center", 
+                                                                     "weight" => "bold", 
+                                                                     "wrap" => true 
+                                                                  ], 
+                                                                  [
+                                                                        "type" => "box", 
+                                                                        "layout" => "baseline", 
+                                                                        "contents" => [
+                                                                           [
+                                                                              "type" => "text", 
+                                                                              "text" => "250 Bath", 
+                                                                              "size" => "xl", 
+                                                                              "align" => "center", 
+                                                                              "gravity" => "center", 
+                                                                              "weight" => "bold", 
+                                                                              "wrap" => true 
                                                                            ] 
                                                                         ] 
-                                                ], 
-            [
-                                                                                       "type" => "bubble", 
-                                                                                       "hero" => [
-                                                                                          "type" => "image", 
-                                                                                          "url" => "https://sv1.picz.in.th/images/2020/01/14/Ri093Q.jpg", 
-                                                                                          "size" => "full", 
-                                                                                          "aspectRatio" => "20:13", 
-                                                                                          "aspectMode" => "cover", 
-                                                                                          "backgroundColor" => "#FFFFFF" 
+                                                                     ] 
+                                                               ] 
+                                                            ], 
+                                                         "footer" => [
+                                                                                 "type" => "box", 
+                                                                                 "layout" => "vertical", 
+                                                                                 "spacing" => "sm", 
+                                                                                 "contents" => [
+                                                                                    [
+                                                                                       "type" => "button", 
+                                                                                       "action" => [
+                                                                                          "type" => "uri", 
+                                                                                          "label" => "Details", 
+                                                                                          "uri" => "https://linecorp.com" 
                                                                                        ], 
-                                                                                       "body" => [
-                                                                                             "type" => "box", 
-                                                                                             "layout" => "vertical", 
-                                                                                             "spacing" => "sm", 
-                                                                                             "contents" => [
-                                                                                                [
+                                                                                       "flex" => 1, 
+                                                                                       "color" => "#00E00C", 
+                                                                                       "style" => "primary" 
+                                                                                    ] 
+                                                                                 ] 
+                                                                              ] 
+                                                      ], 
+            [
+                                                                                             "type" => "bubble", 
+                                                                                             "hero" => [
+                                                                                                "type" => "image", 
+                                                                                                "url" => "https://sv1.picz.in.th/images/2020/01/14/Ri093Q.jpg", 
+                                                                                                "size" => "full", 
+                                                                                                "aspectRatio" => "20:13", 
+                                                                                                "aspectMode" => "cover", 
+                                                                                                "backgroundColor" => "#FFFFFF" 
+                                                                                             ], 
+                                                                                             "body" => [
                                                                                                    "type" => "box", 
                                                                                                    "layout" => "vertical", 
+                                                                                                   "spacing" => "sm", 
                                                                                                    "contents" => [
                                                                                                       [
-                                                                                                         "type" => "text", 
-                                                                                                         "text" => "Sleeved Shirt , Black", 
-                                                                                                         "size" => "xl", 
-                                                                                                         "align" => "center", 
-                                                                                                         "weight" => "bold" 
-                                                                                                      ] 
+                                                                                                         "type" => "box", 
+                                                                                                         "layout" => "vertical", 
+                                                                                                         "contents" => [
+                                                                                                            [
+                                                                                                               "type" => "text", 
+                                                                                                               "text" => "Sleeved Shirt , Black", 
+                                                                                                               "size" => "xl", 
+                                                                                                               "align" => "center", 
+                                                                                                               "weight" => "bold" 
+                                                                                                            ] 
+                                                                                                         ] 
+                                                                                                      ], 
+                                                                                                      [
+                                                                                                                  "type" => "text", 
+                                                                                                                  "text" => "275 Bath", 
+                                                                                                                  "size" => "xl", 
+                                                                                                                  "align" => "center", 
+                                                                                                                  "weight" => "bold" 
+                                                                                                               ] 
                                                                                                    ] 
                                                                                                 ], 
-                                                                                                [
-                                                                                                            "type" => "text", 
-                                                                                                            "text" => "275 Bath", 
-                                                                                                            "size" => "xl", 
-                                                                                                            "align" => "center", 
-                                                                                                            "weight" => "bold" 
-                                                                                                         ] 
-                                                                                             ] 
-                                                                                          ], 
-                                                                                       "footer" => [
-                                                                                                               "type" => "box", 
-                                                                                                               "layout" => "horizontal", 
-                                                                                                               "flex" => 1, 
-                                                                                                               "contents" => [
-                                                                                                                  [
-                                                                                                                     "type" => "button", 
-                                                                                                                     "action" => [
-                                                                                                                        "type" => "uri", 
-                                                                                                                        "label" => "Details", 
-                                                                                                                        "uri" => "line://app/1653550371-y5nGjkMW" 
-                                                                                                                     ], 
+                                                                                             "footer" => [
+                                                                                                                     "type" => "box", 
+                                                                                                                     "layout" => "horizontal", 
                                                                                                                      "flex" => 1, 
-                                                                                                                     "color" => "#00E00C", 
-                                                                                                                     "style" => "primary" 
-                                                                                                                  ] 
-                                                                                                               ] 
-                                                                                                            ] 
-                                                                                    ] 
+                                                                                                                     "contents" => [
+                                                                                                                        [
+                                                                                                                           "type" => "button", 
+                                                                                                                           "action" => [
+                                                                                                                              "type" => "uri", 
+                                                                                                                              "label" => "Button", 
+                                                                                                                              "uri" => "https://linecorp.com" 
+                                                                                                                           ], 
+                                                                                                                           "flex" => 1, 
+                                                                                                                           "color" => "#00E00C", 
+                                                                                                                           "style" => "primary" 
+                                                                                                                        ] 
+                                                                                                                     ] 
+                       ] 
+                    ] 
          ] 
       ] 
-]; 
+];  
 
 if ( sizeof($request_array['events']) > 0 ) {
     foreach ($request_array['events'] as $event) {
