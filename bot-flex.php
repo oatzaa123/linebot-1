@@ -104,7 +104,7 @@ $jsonFlex = [
                                                    "action" => [
                                                       "type" => "uri", 
                                                       "label" => "Details", 
-                                                      "uri" => "https://linecorp.com" 
+                                                      "uri" => "line://app/1653550371-qMbVE2kR" 
                                                    ], 
                                                    "color" => "#00E00C", 
                                                    "style" => "primary" 
@@ -161,7 +161,7 @@ $jsonFlex = [
                                                                                        "action" => [
                                                                                           "type" => "uri", 
                                                                                           "label" => "Details", 
-                                                                                          "uri" => "https://linecorp.com" 
+                                                                                          "uri" => "line://app/1653550371-qMbVE2kR" 
                                                                                        ], 
                                                                                        "flex" => 1, 
                                                                                        "color" => "#00E00C", 
@@ -213,11 +213,11 @@ $jsonFlex = [
                                                                                                                      "flex" => 1, 
                                                                                                                      "contents" => [
                                                                                                                         [
-                                                                                                                           "type" => "button", 
+                                                                                                                           "type" => "details", 
                                                                                                                            "action" => [
                                                                                                                               "type" => "uri", 
                                                                                                                               "label" => "Button", 
-                                                                                                                              "uri" => "https://linecorp.com" 
+                                                                                                                              "uri" => "line://app/1653550371-y5nGjkMW" 
                                                                                                                            ], 
                                                                                                                            "flex" => 1, 
                                                                                                                            "color" => "#00E00C", 
