@@ -213,10 +213,10 @@ $jsonFlex = [
                                                                                                                      "flex" => 1, 
                                                                                                                      "contents" => [
                                                                                                                         [
-                                                                                                                           "type" => "details", 
+                                                                                                                           "type" => "button", 
                                                                                                                            "action" => [
                                                                                                                               "type" => "uri", 
-                                                                                                                              "label" => "Button", 
+                                                                                                                              "label" => "Details", 
                                                                                                                               "uri" => "line://app/1653550371-y5nGjkMW" 
                                                                                                                            ], 
                                                                                                                            "flex" => 1, 
