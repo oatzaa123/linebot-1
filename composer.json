@@ -1,12 +1,5 @@
 {
     "require": {
         "php": "^7.3.12",
-        "kreait/firebase-php": "4.35",
-        "google/cloud-firestore": "^1.10",
-        "grpc/grpc": "^1.26",
-        "ext-mysqli": "*"
-    },
-  "require-dev": {
-    "heroku/heroku-buildpack-php": "*"
-  }
+    }
 }
