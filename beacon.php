@@ -12,6 +12,7 @@ $query = "SELECT * FROM product WHERE id = 2";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
+mysql_query("set character set utf8");
   foreach($result as $row){
       $jsonFlex = [
         'type' => 'flex',
