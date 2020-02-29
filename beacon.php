@@ -12,7 +12,6 @@ $query = "SELECT * FROM product WHERE id = 1";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
-if($result && $result->num_rows > 0){
   foreach($result as $row){
       $jsonFlex = [
         'type' => 'flex',
@@ -88,7 +87,6 @@ if($result && $result->num_rows > 0){
         ],
       ];
     }
-  }
 if ( sizeof($request_array['events']) > 0 ) {
     foreach ($request_array['events'] as $event) {
         error_log(json_encode($event));
