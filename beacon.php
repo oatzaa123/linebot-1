@@ -9,7 +9,7 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
 $query = "SELECT * FROM product WHERE id = 1";
-$statement = $connect->prepare($query);
+$statement = $connect->query($query);
 $statement->execute();
 $result = $statement->fetchAll();
   foreach($result as $row){
