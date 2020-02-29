@@ -1,9 +1,8 @@
 <?php
 
-
 $API_URL = 'https://api.line.me/v2/bot/message';
-$ACCESS_TOKEN = 'ouhqskdRP/sUP8uwpjAadPDJz6rj1Y3IR0/ZznmHBgsPmYq6Q+hzdEJ4OXgyw/8NaLy6GLAZYYbLhF/7S6i8K07k3yxT0sWcMEa6ixgJ2c0XIOEKRfUEQAsHVi4PbQU4HEk9GOq/cmdR3iRkQE9e5gdB04t89/1O/w1cDnyilFU='; 
-$channelSecret = 'ba6e01c3eb0671a32e7d9fb3dbabd67d';
+$ACCESS_TOKEN = 'viahgF0U1r8cCxs6JmmQeClrBHE3Sng0L2eDKKGhIV5vv/i+Vl+Up9eooWqor+ABRue6wumafsXliuy7VRjo9trjdcPmFLcLggrp3A2SOBm4L1asIjUTVtJaiR9dCcL6pkF6nsZQBJRI90N6aZdXigdB04t89/1O/w1cDnyilFU='; 
+$channelSecret = '8efdfa82f3fa7f1e0ee974a83b5c6e05';
 
 
 $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' . $ACCESS_TOKEN);
@@ -11,137 +10,236 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
+ $jayParsedAry = [
+   "type" => "flex", 
+   "altText" => "Flex Message", 
+   "contents" => [
+         "type" => "bubble", 
+         "direction" => "ltr", 
+         "body" => [
+            "type" => "box", 
+            "layout" => "vertical", 
+            "contents" => [
+               [
+                  "type" => "text", 
+                  "text" => "รายการสินค้าใหม่ประจำเดือน", 
+                  "size" => "lg", 
+                  "align" => "center", 
+                  "gravity" => "center", 
+                  "weight" => "regular", 
+                  "color" => "#00FABF" 
+               ] 
+            ] 
+         ] 
+      ] 
+]; 
+ 
+ 
 $jsonFlex = [
-    "type" => "flex",
-    "altText" => "Hello Flex Message",
-    "contents" => [
-      "type" => "bubble",
-      "direction" => "ltr",
-      "header" => [
-        "type" => "box",
-        "layout" => "vertical",
-        "contents" => [
-          [
-            "type" => "text",
-            "text" => "Purchase",
-            "size" => "lg",
-            "align" => "start",
-            "weight" => "bold",
-            "color" => "#009813"
-          ],
-          [
-            "type" => "text",
-            "text" => "฿ 100.00",
-            "size" => "3xl",
-            "weight" => "bold",
-            "color" => "#000000"
-          ],
-          [
-            "type" => "text",
-            "text" => "Rabbit Line Pay",
-            "size" => "lg",
-            "weight" => "bold",
-            "color" => "#000000"
-          ],
-          [
-            "type" => "text",
-            "text" => "2019.02.14 21:47 (GMT+0700)",
-            "size" => "xs",
-            "color" => "#B2B2B2"
-          ],
-          [
-            "type" => "text",
-            "text" => "Payment complete.",
-            "margin" => "lg",
-            "size" => "lg",
-            "color" => "#000000"
-          ]
-        ]
-      ],
-      "body" => [
-        "type" => "box",
-        "layout" => "vertical",
-        "contents" => [
-          [
-            "type" => "separator",
-            "color" => "#C3C3C3"
-          ],
-          [
-            "type" => "box",
-            "layout" => "baseline",
-            "margin" => "lg",
-            "contents" => [
-              [
-                "type" => "text",
-                "text" => "Merchant",
-                "align" => "start",
-                "color" => "#C3C3C3"
-              ],
-              [
-                "type" => "text",
-                "text" => "BTS 01",
-                "align" => "end",
-                "color" => "#000000"
-              ]
-            ]
-          ],
-          [
-            "type" => "box",
-            "layout" => "baseline",
-            "margin" => "lg",
-            "contents" => [
-              [
-                "type" => "text",
-                "text" => "New balance",
-                "color" => "#C3C3C3"
-              ],
-              [
-                "type" => "text",
-                "text" => "฿ 45.57",
-                "align" => "end"
-              ]
-            ]
-          ],
-          [
-            "type" => "separator",
-            "margin" => "lg",
-            "color" => "#C3C3C3"
-          ]
-        ]
-      ],
-      "footer" => [
-        "type" => "box",
-        "layout" => "horizontal",
-        "contents" => [
-          [
-            "type" => "text",
-            "text" => "View Details",
-            "size" => "lg",
-            "align" => "start",
-            "color" => "#0084B6",
-            "action" => [
-              "type" => "uri",
-              "label" => "View Details",
-              "uri" => "https://google.co.th/"
-            ]
-          ]
-        ]
-      ]
-    ]
-  ];
-
-
+   "type" => "flex", 
+   "altText" => "Flex Message", 
+   "contents" => [
+         "type" => "carousel", 
+         "contents" => [
+            [
+               "type" => "bubble", 
+               "direction" => "ltr", 
+               "hero" => [
+                  "type" => "image", 
+                  "url" => "https://sv1.picz.in.th/images/2020/02/01/RFgAnD.jpg", 
+                  "align" => "center", 
+                  "gravity" => "center", 
+                  "size" => "full", 
+                  "aspectRatio" => "3:4", 
+                  "aspectMode" => "cover" 
+               ] 
+            ], 
+            [
+                     "type" => "bubble", 
+                     "direction" => "ltr", 
+                     "hero" => [
+                        "type" => "image", 
+                        "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+                        "size" => "full", 
+                        "aspectRatio" => "20:13", 
+                        "aspectMode" => "cover" 
+                     ], 
+                     "body" => [
+                           "type" => "box", 
+                           "layout" => "vertical", 
+                           "spacing" => "sm", 
+                           "contents" => [
+                              [
+                                 "type" => "text", 
+                                 "text" => "Jeans , Denim color", 
+                                 "size" => "xl", 
+                                 "align" => "center", 
+                                 "gravity" => "center", 
+                                 "weight" => "bold", 
+                                 "wrap" => true 
+                              ], 
+                              [
+                                    "type" => "box", 
+                                    "layout" => "baseline", 
+                                    "contents" => [
+                                       [
+                                          "type" => "text", 
+                                          "text" => "500 Bath", 
+                                          "size" => "xl", 
+                                          "align" => "center", 
+                                          "weight" => "bold", 
+                                          "wrap" => true 
+                                       ] 
+                                    ] 
+                                 ] 
+                           ] 
+                        ], 
+                     "footer" => [
+                                             "type" => "box", 
+                                             "layout" => "vertical", 
+                                             "spacing" => "sm", 
+                                             "contents" => [
+                                                [
+                                                   "type" => "button", 
+                                                   "action" => [
+                                                      "type" => "uri", 
+                                                      "label" => "Details", 
+                                                      "uri" => "line://app/1653550371-qMbVE2kR" 
+                                                   ], 
+                                                   "color" => "#00E00C", 
+                                                   "style" => "primary" 
+                                                ] 
+                                             ] 
+                                          ] 
+                  ], 
+            [
+                                                         "type" => "bubble", 
+                                                         "hero" => [
+                                                            "type" => "image", 
+                                                            "url" => "https://sv1.picz.in.th/images/2020/01/11/RwbPqt.jpg", 
+                                                            "size" => "full", 
+                                                            "aspectRatio" => "20:13", 
+                                                            "aspectMode" => "cover" 
+                                                         ], 
+                                                         "body" => [
+                                                               "type" => "box", 
+                                                               "layout" => "vertical", 
+                                                               "spacing" => "sm", 
+                                                               "contents" => [
+                                                                  [
+                                                                     "type" => "text", 
+                                                                     "text" => "Hat with a rape , Red", 
+                                                                     "size" => "xl", 
+                                                                     "align" => "center", 
+                                                                     "weight" => "bold", 
+                                                                     "wrap" => true 
+                                                                  ], 
+                                                                  [
+                                                                        "type" => "box", 
+                                                                        "layout" => "baseline", 
+                                                                        "contents" => [
+                                                                           [
+                                                                              "type" => "text", 
+                                                                              "text" => "250 Bath", 
+                                                                              "size" => "xl", 
+                                                                              "align" => "center", 
+                                                                              "gravity" => "center", 
+                                                                              "weight" => "bold", 
+                                                                              "wrap" => true 
+                                                                           ] 
+                                                                        ] 
+                                                                     ] 
+                                                               ] 
+                                                            ], 
+                                                         "footer" => [
+                                                                                 "type" => "box", 
+                                                                                 "layout" => "vertical", 
+                                                                                 "spacing" => "sm", 
+                                                                                 "contents" => [
+                                                                                    [
+                                                                                       "type" => "button", 
+                                                                                       "action" => [
+                                                                                          "type" => "uri", 
+                                                                                          "label" => "Details", 
+                                                                                          "uri" => "line://app/1653550371-qMbVE2kR" 
+                                                                                       ], 
+                                                                                       "flex" => 1, 
+                                                                                       "color" => "#00E00C", 
+                                                                                       "style" => "primary" 
+                                                                                    ] 
+                                                                                 ] 
+                                                                              ] 
+                                                      ], 
+            [
+                                                                                             "type" => "bubble", 
+                                                                                             "hero" => [
+                                                                                                "type" => "image", 
+                                                                                                "url" => "https://sv1.picz.in.th/images/2020/01/14/Ri093Q.jpg", 
+                                                                                                "size" => "full", 
+                                                                                                "aspectRatio" => "20:13", 
+                                                                                                "aspectMode" => "cover", 
+                                                                                                "backgroundColor" => "#FFFFFF" 
+                                                                                             ], 
+                                                                                             "body" => [
+                                                                                                   "type" => "box", 
+                                                                                                   "layout" => "vertical", 
+                                                                                                   "spacing" => "sm", 
+                                                                                                   "contents" => [
+                                                                                                      [
+                                                                                                         "type" => "box", 
+                                                                                                         "layout" => "vertical", 
+                                                                                                         "contents" => [
+                                                                                                            [
+                                                                                                               "type" => "text", 
+                                                                                                               "text" => "Sleeved Shirt , Black", 
+                                                                                                               "size" => "xl", 
+                                                                                                               "align" => "center", 
+                                                                                                               "weight" => "bold" 
+                                                                                                            ] 
+                                                                                                         ] 
+                                                                                                      ], 
+                                                                                                      [
+                                                                                                                  "type" => "text", 
+                                                                                                                  "text" => "275 Bath", 
+                                                                                                                  "size" => "xl", 
+                                                                                                                  "align" => "center", 
+                                                                                                                  "weight" => "bold" 
+                                                                                                               ] 
+                                                                                                   ] 
+                                                                                                ], 
+                                                                                             "footer" => [
+                                                                                                                     "type" => "box", 
+                                                                                                                     "layout" => "horizontal", 
+                                                                                                                     "flex" => 1, 
+                                                                                                                     "contents" => [
+                                                                                                                        [
+                                                                                                                           "type" => "button", 
+                                                                                                                           "action" => [
+                                                                                                                              "type" => "uri", 
+                                                                                                                              "label" => "Details", 
+                                                                                                                              "uri" => "line://app/1653550371-y5nGjkMW" 
+                                                                                                                           ], 
+                                                                                                                           "flex" => 1, 
+                                                                                                                           "color" => "#00E00C", 
+                                                                                                                           "style" => "primary" 
+                                                                                                                        ] 
+                                                                                                                     ] 
+                       ] 
+                    ] 
+         ] 
+      ] 
+];  
 
 if ( sizeof($request_array['events']) > 0 ) {
     foreach ($request_array['events'] as $event) {
         error_log(json_encode($event));
-        $reply_message = 'ขอบคุณสำหรับข้อความ';
+        $reply_message = '';
         $reply_token = $event['replyToken'];
 
 
         $data = [
             'replyToken' => $reply_token,
-            'messages' => [$jsonFlex]
+            'messages' => [$jayParsedAry,$jsonFlex]
         ];
 
         print_r($data);
