@@ -9,9 +9,11 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
 $query = "SELECT * FROM product WHERE 1 ORDER BY id";
-$result = $connect->query($sql);
+$statement = $connect->prepare($query);
+$statement->execute();
+$result = $statement->fetchAll();
 if($result && $result->num_rows > 0){
-  while($row = $result->fetch_assoc()){
+  foreach($result as $row){
       $jsonFlex = [
         'type' => 'flex',
         'altText' => 'Flex Message',
