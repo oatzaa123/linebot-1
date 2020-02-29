@@ -1,5 +1,4 @@
 <?php
-include("database_connection.php");
 
 $API_URL = 'https://api.line.me/v2/bot/message';
 $ACCESS_TOKEN = 'viahgF0U1r8cCxs6JmmQeClrBHE3Sng0L2eDKKGhIV5vv/i+Vl+Up9eooWqor+ABRue6wumafsXliuy7VRjo9trjdcPmFLcLggrp3A2SOBm4L1asIjUTVtJaiR9dCcL6pkF6nsZQBJRI90N6aZdXigdB04t89/1O/w1cDnyilFU='; 
@@ -8,10 +7,13 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
+$host = "us-cdbr-iron-east-04.cleardb.net";
+$username = "b6067353944e3b";
+$password = "d0750afa";
+$connect = mysqli_connect($host,$username,$password);
+$db = mysqli_select_db("heroku_78e9a719b1cc08e")
 $query = "SELECT * FROM product WHERE id = 1";
-$statement = $connect->query($query);
-$statement->execute();
-$result = $statement->fetchAll();
+$result = mysql_query($query) or die (mysql_error());
   foreach($result as $row){
       $jsonFlex = [
         'type' => 'flex',
