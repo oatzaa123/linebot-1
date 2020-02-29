@@ -12,8 +12,8 @@ $username = "b6067353944e3b";
 $password = "d0750afa";
 $connect = mysqli_connect($host,$username,$password);
 $db = mysqli_select_db("heroku_78e9a719b1cc08e")
-$query = "SELECT * FROM product WHERE id = 1";
-$result = mysql_query($query) or die (mysql_error());
+$sql = "SELECT * FROM product WHERE id = 1";
+$result = mysql_query($sql) or die (mysql_error());
   foreach($result as $row){
       $jsonFlex = [
         'type' => 'flex',
