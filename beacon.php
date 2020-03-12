@@ -23,7 +23,7 @@ $result = $statement->fetchAll();
           'hero' => 
           [
             'type' => 'image',
-            'Image' => $row["product_img"],
+            'text' => $row["product_img"],
             'size' => 'full',
             'aspectRatio' => '20:13',
             'aspectMode' => 'cover',
