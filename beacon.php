@@ -8,6 +8,79 @@ $POST_HEADER = array('Content-Type: application/json , text/html; charset=UTF-8'
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
+$jsonFlex = [
+        'type' => 'flex',
+        'altText' => 'Flex Message',
+        'contents' => 
+        [
+          'type' => 'bubble',
+          'direction' => 'ltr',
+          'hero' => 
+          [
+            'type' => 'image',
+            'url' => 'https://sv1.picz.in.th/images/2020/03/12/Q4HJVV.jpg',
+            'size' => 'full',
+            'aspectRatio' => '20:13',
+            'aspectMode' => 'cover',
+          ],
+          'body' => 
+          [
+            'type' => 'box',
+            'layout' => 'vertical',
+            'spacing' => 'sm',
+            'contents' => 
+            [
+              0 => 
+              [
+                'type' => 'text',
+                'text' => $row["product_name"],
+                'size' => 'xl',
+                'align' => 'center',
+                'gravity' => 'center',
+                'weight' => 'bold',
+                'wrap' => true,
+              ],
+              1 => 
+              [
+                'type' => 'box',
+                'layout' => 'baseline',
+                'contents' => 
+                [
+                  0 => 
+                  [
+                    'type' => 'text',
+                    'text' => $row["product_price"],
+                    'size' => 'xl',
+                    'align' => 'center',
+                    'weight' => 'bold',
+                    'wrap' => true,
+                  ],
+                ],
+              ],
+            ],
+          ],
+          'footer' => 
+          [
+            'type' => 'box',
+            'layout' => 'vertical',
+            'spacing' => 'sm',
+            'contents' => 
+            [
+              0 => 
+              [
+                'type' => 'button',
+                'action' => 
+                [
+                  'type' => 'uri',
+                  'label' => 'Details',
+                  'uri' => 'line://app/1653550371-lm6xDb7g',
+                ],
+                'style' => 'primary',
+              ],
+            ],
+          ],
+        ],
+      ];
 $query = "SELECT * FROM product WHERE id = 2";
 $statement = $connect->prepare($query);
 $statement->execute();
