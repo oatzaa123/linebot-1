@@ -23,7 +23,7 @@ $result = $statement->fetchAll();
           'hero' => 
           [
             'type' => 'image',
-            'url' => https://sv1.picz.in.th/images/2020/03/12/Q4HJVV.jpg,
+            'url' => 'https://sv1.picz.in.th/images/2020/03/12/Q4HJVV.jpg',
             'size' => 'full',
             'aspectRatio' => '20:13',
             'aspectMode' => 'cover',
