@@ -13,6 +13,7 @@ $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
   foreach($result as $row){
+    $image = $row['product_img']
     $jsonFlex = [
    "type" => "flex", 
    "altText" => "Flex Message", 
@@ -78,12 +79,11 @@ $result = $statement->fetchAll();
          "spacing" => "sm", 
          "contents" => [
            [
-            "type" => "text", 
-            "text" => $row['product_price'], 
-            "size" => "xl", 
-            "align" => "center", 
-            "weight" => "bold", 
-            "wrap" => true  
+            "type": "text",
+          "text": "$row['product_details]",
+          "size": "xl",
+          "align": "center",
+          "color": "#000000"
            ]
        ] 
      ] 
