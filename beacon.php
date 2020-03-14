@@ -37,7 +37,7 @@ $result = $statement->fetchAll();
                      "direction" => "ltr", 
                      "hero" => [
                         "type" => "image", 
-                        "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+                        "url" => $row['product_img'], 
                         "size" => "full", 
                         "aspectRatio" => "20:13", 
                         "aspectMode" => "cover" 
@@ -78,11 +78,12 @@ $result = $statement->fetchAll();
          "spacing" => "sm", 
          "contents" => [
            [
-            "type" => "button", 
-            "action" => [
-            "type" => "uri", 
-            "label" => "Details", 
-            "uri" => "line://app/1653550371-qMbVE2kR" 
+            "type" => "text", 
+            "text" => $row['product_price'], 
+            "size" => "xl", 
+            "align" => "center", 
+            "weight" => "bold", 
+            "wrap" => true  
            ], 
          "color" => "#00E00C", 
          "style" => "primary" 
