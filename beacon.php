@@ -84,9 +84,7 @@ $result = $statement->fetchAll();
             "align" => "center", 
             "weight" => "bold", 
             "wrap" => true  
-           ], 
-         "color" => "#00E00C", 
-         "style" => "primary" 
+           ]
        ] 
      ] 
    ] 
