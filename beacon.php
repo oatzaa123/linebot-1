@@ -13,7 +13,6 @@ $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
   foreach($result as $row){
-    $image = $row['product_img']
     $jsonFlex = [
    "type" => "flex", 
    "altText" => "Flex Message", 
