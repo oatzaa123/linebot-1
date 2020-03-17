@@ -16,7 +16,6 @@ $query = "SELECT * FROM product LIMIT 1 WHERE id = 2";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
-foreach($result as $row){
   foreach($result as $row) {
 $jsonFlex = [
     "type" => "flex", 
