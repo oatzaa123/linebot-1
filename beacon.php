@@ -78,11 +78,11 @@ $result = $statement->fetchAll();
          "spacing" => "sm", 
          "contents" => [
            [
-            "type": "text",
-          "text": "$row['product_details]",
-          "size": "xl",
-          "align": "center",
-          "color": "#000000"
+            "type"=> "text",
+          "text"=> "$row['product_details]",
+          "size"=> "xl",
+          "align"=> "center",
+          "color"=> "#000000"
            ]
        ] 
      ] 
