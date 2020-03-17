@@ -88,7 +88,6 @@ $result = $statement->fetchAll();
      ] 
    ] 
  ] 
-]
 ];
 }
 if (isset($request_array['events']) > 0 ) {
