@@ -34,7 +34,6 @@ foreach($result as $row){
                   "size" => "full", 
                   "aspectRatio" => "3:4", 
                   "aspectMode" => "cover" 
-               ] 
             ], 
             [
                      "type" => "bubble", 
@@ -88,11 +87,13 @@ foreach($result as $row){
           "align"=> "center",
           "color"=> "#000000"
            ]
+        ] 
        ] 
-     ] 
-   ] 
- ] 
+    ] 
+  ] 
+]
 ];
+
 }
 echo json_encode($jsonFlex);
 if (isset($request_array['events']) > 0) {
