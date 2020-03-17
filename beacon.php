@@ -17,7 +17,7 @@ $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
 foreach($result as $row){
-  $jsonFlex[] = [
+  $jsonFlex = [
    "type" => "flex", 
    "altText" => "Flex Message", 
    "contents" => [
