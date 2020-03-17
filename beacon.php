@@ -57,26 +57,22 @@ foreach($result as $row){
                               "wrap" => true 
                            ] 
                         ] 
-                     ] 
-               ] 
-            ], 
-         "footer" => [
+                     ], 
+                  [
                                  "type" => "box", 
                                  "layout" => "vertical", 
-                                 "spacing" => "sm", 
                                  "contents" => [
                                     [
                                        "type" => "text", 
                                        "text" => $row['product_details], 
-                                       "size" => "xl", 
-                                       "align" => "center", 
-                                       "color" => "#000000" 
+                                       "align" => "center" 
                                     ] 
                                  ] 
                               ] 
-      ]
-];
-
+               ] 
+            ] 
+      ] 
+]; 
 }
 echo json_encode($jsonFlex);
 if (isset($request_array['events']) > 0) {
