@@ -8,7 +8,7 @@ $POST_HEADER = array('Content-Type: application/json , text/html; charset=UTF-8'
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 
-$query = "SELECT * FROM product WHERE id=2";
+$query = "SELECT * FROM product";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
