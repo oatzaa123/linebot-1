@@ -10,13 +10,14 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 var_export($request_array);
+$jsonFlex = [];
 
 $query = "SELECT * FROM product LIMIT 1";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
 foreach($result as $row){
-  $jsonFlex = [
+  $jsonFlex[] = [
    "type" => "flex", 
    "altText" => "Flex Message", 
    "contents" => [
@@ -93,8 +94,8 @@ foreach($result as $row){
  ] 
 ]
 ];
-echo json_encode($jsonFlex);
 }
+echo json_encode($jsonFlex);
 if (sizeof($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
         error_log(json_encode($event));
