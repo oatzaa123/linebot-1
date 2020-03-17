@@ -93,7 +93,7 @@ foreach($result as $row){
  ] 
 ]
 ];
-
+}
 if (sizeof($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
         error_log(json_encode($event));
@@ -110,7 +110,7 @@ if (sizeof($request_array['events']) > 0) {
         
     }
 }
-}
+
 echo "OK";
 function send_reply_message($url, $post_header, $post_body)
 {
