@@ -93,6 +93,7 @@ foreach($result as $row){
  ] 
 ]
 ];
+echo json_encode($jsonFlex);
 }
 if (sizeof($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
