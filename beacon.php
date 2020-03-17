@@ -92,6 +92,7 @@ $result = $statement->fetchAll();
      ] 
    ] 
  ] 
+]
 ];
 }
 
