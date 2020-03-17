@@ -79,7 +79,7 @@ $result = $statement->fetchAll();
          "contents" => [
            [
             "type"=> "text",
-          "text"=> "$row['product_details]",
+          "text"=> $row['product_details],
           "size"=> "xl",
           "align"=> "center",
           "color"=> "#000000"
