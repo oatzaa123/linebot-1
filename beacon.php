@@ -12,7 +12,7 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 var_export($request_array);
 $jsonFlex = [];
 
-$query = "SELECT * FROM product WHERE id = 2";
+$query = "SELECT * FROM product";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
@@ -25,7 +25,7 @@ $jsonFlex = [
          "direction" => "ltr", 
          "hero" => [
             "type" => "image", 
-            "url" => "https://websbackend.herokuapp.com/upload/01.jpg", 
+            "url" => "https://websbackend.herokuapp.com/upload/.$row['product_img]", 
             "size" => "full", 
             "aspectRatio" => "20:13", 
             "aspectMode" => "cover" 
