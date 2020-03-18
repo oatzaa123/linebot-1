@@ -12,10 +12,12 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 var_export($request_array);
 $jsonFlex = [];
 
-$query = "SELECT * FROM product WHERE id = 2";
+$query = "SELECT * FROM product";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
+$total_row = $statement->rowCount();
+if($total_row > 0) {
   foreach($result as $row) {
 $jsonFlex = [
     "type" => "flex", 
@@ -73,6 +75,7 @@ $jsonFlex = [
             ] 
       ] 
 ]; 
+}
 }
 echo json_encode($jsonFlex);
 if (isset($request_array['events']) > 0) {
