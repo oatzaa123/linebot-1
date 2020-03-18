@@ -1,3 +1,3 @@
 <?php
-$connect = new PDO( 'mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_6876a6ae8580ca8', 'b04445289daf70', 'f9c7c57b' );
+$connect = new PDO("mysql:host=us-cdbr-iron-east-04.cleardb.net;dbname=heroku_78e9a719b1cc08e", "b6067353944e3b", "d0750afa");
 ?>
