@@ -12,7 +12,7 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 var_export($request_array);
 $jsonFlex = [];
 
-$query = "SELECT * FROM product ORDER BY id ASC";
+$query = "SELECT * FROM product WHERE id = '".$_POST['id']."'";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
