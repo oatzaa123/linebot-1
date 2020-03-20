@@ -20,59 +20,77 @@ $total_row = $statement->rowCount();
 if($total_row > 0) {
   foreach($result as $row) {
 $jsonFlex = [
-    "type" => "flex", 
+     "type" => "flex", 
    "altText" => "Flex Message", 
    "contents" => [
          "type" => "carousel", 
-         "direction" => "ltr", 
-         "hero" => [
-            "type" => "image", 
-            "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img'], 
-            "size" => "full", 
-            "aspectRatio" => "20:13", 
-            "aspectMode" => "cover" 
-         ], 
-         "body" => [
-               "type" => "box", 
-               "layout" => "vertical", 
-               "spacing" => "sm", 
-               "contents" => [
-                  [
-                     "type" => "text", 
-                     "text" => $row['product_name'], 
-                     "size" => "xl", 
-                     "align" => "center", 
-                     "gravity" => "center", 
-                     "weight" => "bold", 
-                     "wrap" => true 
-                  ], 
-                  [
-                        "type" => "box", 
-                        "layout" => "baseline", 
-                        "contents" => [
-                           [
-                              "type" => "text", 
-                              "text" => $row['product_price'], 
-                              "size" => "xl", 
-                              "align" => "center", 
-                              "weight" => "bold", 
-                              "wrap" => true 
+         "contents" => [
+            [
+               "type" => "bubble", 
+               "direction" => "ltr", 
+               "hero" => [
+                  "type" => "image", 
+                  "url" => "https://sv1.picz.in.th/images/2020/02/01/RFgAnD.jpg", 
+                  "align" => "center", 
+                  "gravity" => "center", 
+                  "size" => "full", 
+                  "aspectRatio" => "3:4", 
+                  "aspectMode" => "cover" 
+               ] 
+            ], 
+            [
+                     "type" => "bubble", 
+                     "direction" => "ltr", 
+                     "hero" => [
+                        "type" => "image", 
+                        "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img'], 
+                        "size" => "full", 
+                        "aspectRatio" => "20:13", 
+                        "aspectMode" => "cover" 
+                     ], 
+                     "body" => [
+                           "type" => "box", 
+                           "layout" => "vertical", 
+                           "spacing" => "sm", 
+                           "contents" => [
+                              [
+                                 "type" => "text", 
+                                 "text" => $row['product_name'], 
+                                 "size" => "xl", 
+                                 "align" => "center", 
+                                 "gravity" => "center", 
+                                 "weight" => "bold", 
+                                 "wrap" => true 
+                              ], 
+                              [
+                                    "type" => "box", 
+                                    "layout" => "baseline", 
+                                    "contents" => [
+                                       [
+                                          "type" => "text", 
+                                          "text" => $row['product_price'], 
+                                          "size" => "xl", 
+                                          "align" => "center", 
+                                          "weight" => "bold", 
+                                          "wrap" => true 
+                                       ] 
+                                    ] 
+                                 ], 
+                              [
+                                             "type" => "box", 
+                                             "layout" => "vertical", 
+                                             "contents" => [
+                                                [
+                                                   "type" => "text", 
+                                                   "text" => $row['product_details'], 
+                                                   "align" => "center" 
+                                                ] 
+                                             ] 
+                                          ] 
                            ] 
                         ] 
-                     ], 
-                  [
-                                 "type" => "box", 
-                                 "layout" => "vertical", 
-                                 "contents" => [
-                                    [
-                                       "type" => "text", 
-                                       "text" => $row['product_details'], 
-                                       "align" => "center" 
-                                    ] 
-                                 ] 
-                              ] 
-               ] 
-            ] 
+                  ] 
+         ] 
       ] 
 ]; 
 }
