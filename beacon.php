@@ -34,7 +34,7 @@ $jsonFlex = [
                   "align" => "center", 
                   "gravity" => "center", 
                   "size" => "full", 
-                  "aspectRatio" => "3:4", 
+                  "aspectRatio" => "1:1", 
                   "aspectMode" => "cover" 
                ] 
             ], 
@@ -45,7 +45,7 @@ $jsonFlex = [
                         "type" => "image", 
                         "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img'], 
                         "size" => "full", 
-                        "aspectRatio" => "20:13", 
+                        "aspectRatio" => "1:1", 
                         "aspectMode" => "cover" 
                      ], 
                      "body" => [
@@ -97,7 +97,7 @@ $jsonFlex = [
                                                          "type" => "image", 
                                                          "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img'], 
                                                          "size" => "full", 
-                                                         "aspectRatio" => "20:13", 
+                                                         "aspectRatio" => "1:1", 
                                                          "aspectMode" => "cover" 
                                                       ], 
                                                       "body" => [
