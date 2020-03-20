@@ -34,7 +34,7 @@ $jsonFlex = [
                   "align" => "center", 
                   "gravity" => "center", 
                   "size" => "full", 
-                  "aspectRatio" => "20:13", 
+                  "aspectRatio" => "3:4", 
                   "aspectMode" => "cover" 
                ] 
             ], 
