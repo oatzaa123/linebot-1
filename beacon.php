@@ -16,7 +16,7 @@ $query = "SELECT * FROM product";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
-$total_row = $statement->rowCount();
+
   foreach($result as $row) {
 $jsonFlex = [
      "type" => "flex", 
