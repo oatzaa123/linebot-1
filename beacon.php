@@ -16,7 +16,6 @@ $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
 
-$array = json_decode($jsonFlex);
 $jsonFlex = array (
   'type' => 'flex',
   'altText' => 'Flex Message',
@@ -111,10 +110,6 @@ $jsonFlex = array (
     ),
   ),
 )
-
-foreach($array[0]->type->url as $row){
-    array_push($array,"https://websbackend.herokuapp.com/uploads/".$row['product_img']);
-}   
 
 echo json_encode($jsonFlex);
 if (isset($request_array['events']) > 0) {
