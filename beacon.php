@@ -19,10 +19,10 @@ $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
 
-$query2 = "SELECT * FROM product WHERE id = 62";
-$statement2 = $connect->prepare($query2);
-$statement2->execute();
-$result2 = $statement2->fetchAll();
+$query1 = "SELECT * FROM product WHERE id = 62";
+$statement1 = $connect->prepare($query1);
+$statement1->execute();
+$result1 = $statement2->fetchAll();
 
 foreach($result as $row){
 $jsonFlex = array (
