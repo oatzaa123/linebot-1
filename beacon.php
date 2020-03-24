@@ -19,9 +19,9 @@ $statement->execute();
 $result = $statement->fetchAll();
 
 $query1 = "SELECT * FROM product WHERE id = 12";
-$statement1 = $connect->prepare($query);
+$statement1 = $connect->prepare($query1);
 $statement1->execute();
-$result1 = $statement->fetchAll();
+$result1 = $statement1->fetchAll();
 
   foreach($result as $row) {
 $jsonFlex = [
