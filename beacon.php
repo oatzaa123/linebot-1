@@ -16,6 +16,7 @@ $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
 
+foreach($result as $row) {
 $jsonFlex = [
      "type" => "flex", 
    "altText" => "Flex Message", 
@@ -95,6 +96,7 @@ $jsonFlex = [
          ] 
       ] 
 ]; 
+}
 
 echo json_encode($jsonFlex);
 if (isset($request_array['events']) > 0) {
