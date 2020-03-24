@@ -1,4 +1,75 @@
-<?php
+array (
+  'type' => 'flex',
+  'altText' => 'Flex Message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'direction' => 'ltr',
+    'hero' => 
+    array (
+      'type' => 'image',
+      'url' => 'https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg',
+      'align' => 'center',
+      'size' => 'full',
+      'aspectRatio' => '4:3',
+      'aspectMode' => 'cover',
+    ),
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'spacing' => 'sm',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => 'Jeans , Denim color',
+          'size' => 'xl',
+          'align' => 'center',
+          'gravity' => 'center',
+          'weight' => 'bold',
+          'wrap' => true,
+        ),
+        1 => 
+        array (
+          'type' => 'box',
+          'layout' => 'baseline',
+          'contents' => 
+          array (
+            0 => 
+            array (
+              'type' => 'text',
+              'text' => '500 Bath',
+              'size' => 'xl',
+              'align' => 'center',
+              'weight' => 'bold',
+              'wrap' => true,
+            ),
+          ),
+        ),
+        2 => 
+        array (
+          'type' => 'box',
+          'layout' => 'vertical',
+          'contents' => 
+          array (
+            0 => 
+            array (
+              'type' => 'text',
+              'text' => 'Text',
+              'margin' => 'xl',
+              'size' => 'xl',
+              'align' => 'center',
+              'color' => '#000000',
+              'wrap' => true,
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+);<?php
 include("database_connection.php");
 
 $API_URL = 'https://api.line.me/v2/bot/message';
@@ -124,68 +195,70 @@ echo json_encode($jsonFlex);
 
 foreach($result1 as $row){
 $jsonFlex1 =  array (
-        'type' => 'bubble',
-        'direction' => 'ltr',
-        'hero' => 
+  'type' => 'flex',
+  'altText' => 'Flex Message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'direction' => 'ltr',
+    'hero' => 
+    array (
+      'type' => 'image',
+      'url' => "https://websbackend.herokuapp.com/uploads/".$row['product_img'],
+      'align' => 'center',
+      'size' => 'full',
+      'aspectRatio' => '4:3',
+      'aspectMode' => 'cover',
+    ),
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'spacing' => 'sm',
+      'contents' => 
+      array (
+        0 => 
         array (
-          'type' => 'image',
-          'url' => "https://websbackend.herokuapp.com/uploads/".$row['product_img'],
+          'type' => 'text',
+          'text' => $row['product_name'],
+          'size' => 'xl',
           'align' => 'center',
-          'size' => 'full',
-          'aspectRatio' => '4:3',
-          'aspectMode' => 'cover',
+          'gravity' => 'center',
+          'weight' => 'bold',
+          'wrap' => true,
         ),
-        'body' => 
+        1 => 
         array (
           'type' => 'box',
-          'layout' => 'vertical',
-          'spacing' => 'sm',
+          'layout' => 'baseline',
           'contents' => 
           array (
             0 => 
             array (
               'type' => 'text',
-              'text' => $row['product_name'],
+              'text' => $row['product_price'],
               'size' => 'xl',
               'align' => 'center',
-              'gravity' => 'center',
               'weight' => 'bold',
               'wrap' => true,
             ),
-            1 => 
+          ),
+        ),
+        2 => 
+        array (
+          'type' => 'box',
+          'layout' => 'vertical',
+          'contents' => 
+          array (
+            0 => 
             array (
-              'type' => 'box',
-              'layout' => 'baseline',
-              'contents' => 
-              array (
-                0 => 
-                array (
-                  'type' => 'text',
-                  'text' => $row['product_price'],
-                  'size' => 'xl',
-                  'align' => 'center',
-                  'weight' => 'bold',
-                  'wrap' => true,
-                ),
-              ),
-            ),
-            2 => 
-            array (
-              'type' => 'box',
-              'layout' => 'vertical',
-              'contents' => 
-              array (
-                0 => 
-                array (
-                  'type' => 'text',
-                  'text' => $row['product_details'],
-                  'margin' => 'xl',
-                  'size' => 'xl',
-                  'align' => 'center',
-                  'color' => '#000000',
-                  'wrap' => true,
-                ),
-              ),
+              'type' => 'text',
+              'text' => $row['product_details'],
+              'margin' => 'xl',
+              'size' => 'xl',
+              'align' => 'center',
+              'color' => '#000000',
+              'wrap' => true,
             ),
           ),
         ),
