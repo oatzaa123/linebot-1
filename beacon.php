@@ -46,7 +46,7 @@ $jsonFlex = array (
         'hero' => 
         array (
           'type' => 'image',
-          'url' => 'https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg',
+          'url' => '',
           'align' => 'center',
           'size' => 'full',
           'aspectRatio' => '4:3',
