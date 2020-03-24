@@ -12,10 +12,15 @@ $request_array = json_decode($request, true);   // Decode JSON to Array
 var_export($request_array);
 $jsonFlex = [];
 
-$query = "SELECT * FROM product ORDER BY id asc LIMIT 10";
+$query = "SELECT * FROM product WHERE id = 2";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
+
+$query1 = "SELECT * FROM product WHERE id = 12";
+$statement1 = $connect->prepare($query);
+$statement1->execute();
+$result1 = $statement->fetchAll();
 
   foreach($result as $row) {
 $jsonFlex = [
@@ -99,6 +104,86 @@ $jsonFlex = [
 ]; 
 }
 
+foreach($result1 as $row) {
+$jsonFlex = [
+     "type" => "flex", 
+   "altText" => "Flex Message", 
+   "contents" => [
+         "type" => "carousel", 
+         "contents" => [
+            [
+               "type" => "bubble", 
+               "direction" => "ltr", 
+               "hero" => [
+                  "type" => "image", 
+                  "url" => "https://sv1.picz.in.th/images/2020/02/01/RFgAnD.jpg", 
+                  "align" => "center", 
+                  "gravity" => "center", 
+                  "size" => "full", 
+                  "aspectRatio" => "3:4", 
+                  "aspectMode" => "cover" 
+               ] 
+            ], 
+            [
+                     "type" => "bubble", 
+                     "direction" => "ltr", 
+                     "hero" => [
+                        "type" => "image", 
+                        "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img'], 
+                        "align" => "center", 
+                        "size" => "full", 
+                        "aspectRatio" => "4:3", 
+                        "aspectMode" => "cover" 
+                     ], 
+                     "body" => [
+                           "type" => "box", 
+                           "layout" => "vertical", 
+                           "spacing" => "sm", 
+                           "contents" => [
+                              [
+                                 "type" => "text", 
+                                 "text" => $row['product_name'], 
+                                 "size" => "xl", 
+                                 "align" => "center", 
+                                 "gravity" => "center", 
+                                 "weight" => "bold", 
+                                 "wrap" => true 
+                              ], 
+                              [
+                                    "type" => "box", 
+                                    "layout" => "baseline", 
+                                    "contents" => [
+                                       [
+                                          "type" => "text", 
+                                          "text" => $row['product_price'], 
+                                          "size" => "xl", 
+                                          "align" => "center", 
+                                          "weight" => "bold", 
+                                          "wrap" => true 
+                                       ] 
+                                    ] 
+                                 ], 
+                              [
+                                             "type" => "box", 
+                                             "layout" => "vertical", 
+                                             "contents" => [
+                                                [
+                                                   "type" => "text", 
+                                                   "text" => $row['product_details'], 
+                                                   "margin" => "xl", 
+                                                   "size" => "xl", 
+                                                   "align" => "center", 
+                                                   "color" => "#000000", 
+                                                   "wrap" => true 
+                                                ] 
+                                             ] 
+                                          ] 
+                           ] 
+                        ] 
+                  ] 
+         ] 
+      ] 
+];
 echo json_encode($jsonFlex);
 if (isset($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
