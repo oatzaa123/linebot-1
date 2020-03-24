@@ -731,7 +731,15 @@ $jsonFlex7 = array (
 );
 }
 
-echo $jsonFlex;
+echo json_encode($jsonFlex);
+echo json_encode($jsonFlex1);
+echo json_encode($jsonFlex2);
+echo json_encode($jsonFlex3);
+echo json_encode($jsonFlex4);
+echo json_encode($jsonFlex5);
+echo json_encode($jsonFlex6);
+echo json_encode($jsonFlex7);
+
 if (isset($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
         error_log(json_encode($event));
