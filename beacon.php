@@ -11,6 +11,7 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 var_export($request_array);
 $jsonFlex = [];
+$jsonFlex1 = [];
 
 $query = "SELECT * FROM product WHERE id = 2";
 $statement = $connect->prepare($query);
@@ -105,7 +106,7 @@ $jsonFlex = [
 }
 
 foreach($result1 as $row) {
-$jsonFlex = [
+$jsonFlex1 = [
      "type" => "flex", 
    "altText" => "Flex Message", 
    "contents" => [
@@ -193,7 +194,7 @@ if (isset($request_array['events']) > 0) {
         $reply_token = $event['replyToken'];
         $data = [
             'replyToken' => $reply_token,
-            'messages' => [$jsonFlex]
+            'messages' => [$jsonFlex,$jsonFlex1]
         ];
         print_r($data);
         $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
