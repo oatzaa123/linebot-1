@@ -22,7 +22,7 @@ $result = $statement->fetchAll();
 $query1 = "SELECT * FROM product WHERE id = 62";
 $statement1 = $connect->prepare($query1);
 $statement1->execute();
-$result1 = $statement2->fetchAll();
+$result1 = $statement1->fetchAll();
 
 foreach($result as $row){
 $jsonFlex = array (
