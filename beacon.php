@@ -16,115 +16,89 @@ $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
 
-$jsonFlex = array(
-    [type] => flex
-    [altText] => Flex Message
-    [contents] => Array
-        (
-            [type] => carousel
-            [contents] => Array
-                (
-                    [0] => Array
-                        (
-                            [type] => bubble
-                            [direction] => ltr
-                            [hero] => Array
-                                (
-                                    [type] => image
-                                    [url] => https://sv1.picz.in.th/images/2020/02/01/RFgAnD.jpg
-                                    [align] => center
-                                    [gravity] => center
-                                    [size] => full
-                                    [aspectRatio] => 3:4
-                                    [aspectMode] => cover
-                                )
+$jsonFlex = [
+     "type" => "flex", 
+   "altText" => "Flex Message", 
+   "contents" => [
+         "type" => "carousel", 
+         "contents" => [
+            [
+               "type" => "bubble", 
+               "direction" => "ltr", 
+               "hero" => [
+                  "type" => "image", 
+                  "url" => "https://sv1.picz.in.th/images/2020/02/01/RFgAnD.jpg", 
+                  "align" => "center", 
+                  "gravity" => "center", 
+                  "size" => "full", 
+                  "aspectRatio" => "3:4", 
+                  "aspectMode" => "cover" 
+               ] 
+            ], 
+            [
+                     "type" => "bubble", 
+                     "direction" => "ltr", 
+                     "hero" => [
+                        "type" => "image", 
+                        "url" => , 
+                        "align" => "center", 
+                        "size" => "full", 
+                        "aspectRatio" => "4:3", 
+                        "aspectMode" => "cover" 
+                     ], 
+                     "body" => [
+                           "type" => "box", 
+                           "layout" => "vertical", 
+                           "spacing" => "sm", 
+                           "contents" => [
+                              [
+                                 "type" => "text", 
+                                 "text" => $row['product_name'], 
+                                 "size" => "xl", 
+                                 "align" => "center", 
+                                 "gravity" => "center", 
+                                 "weight" => "bold", 
+                                 "wrap" => true 
+                              ], 
+                              [
+                                    "type" => "box", 
+                                    "layout" => "baseline", 
+                                    "contents" => [
+                                       [
+                                          "type" => "text", 
+                                          "text" => $row['product_price'], 
+                                          "size" => "xl", 
+                                          "align" => "center", 
+                                          "weight" => "bold", 
+                                          "wrap" => true 
+                                       ] 
+                                    ] 
+                                 ], 
+                              [
+                                             "type" => "box", 
+                                             "layout" => "vertical", 
+                                             "contents" => [
+                                                [
+                                                   "type" => "text", 
+                                                   "text" => $row['product_details'], 
+                                                   "margin" => "xl", 
+                                                   "size" => "xl", 
+                                                   "align" => "center", 
+                                                   "color" => "#000000", 
+                                                   "wrap" => true 
+                                                ] 
+                                             ] 
+                                          ] 
+                           ] 
+                        ] 
+                  ] 
+         ] 
+      ] 
+];
 
-                        )
-
-                    [1] => Array
-                        (
-                            [type] => bubble
-                            [direction] => ltr
-                            [hero] => Array
-                                (
-                                    [type] => image
-                                    [url] => 889113501.jpg
-                                    [align] => center
-                                    [size] => full
-                                    [aspectRatio] => 4:3
-                                    [aspectMode] => cover
-                                )
-
-                            [body] => Array
-                                (
-                                    [type] => box
-                                    [layout] => vertical
-                                    [spacing] => sm
-                                    [contents] => Array
-                                        (
-                                            [0] => Array
-                                                (
-                                                    [type] => text
-                                                    [text] => สร้อย
-                                                    [size] => xl
-                                                    [align] => center
-                                                    [gravity] => center
-                                                    [weight] => bold
-                                                    [wrap] => 1
-                                                )
-
-                                            [1] => Array
-                                                (
-                                                    [type] => box
-                                                    [layout] => baseline
-                                                    [contents] => Array
-                                                        (
-                                                            [0] => Array
-                                                                (
-                                                                    [type] => text
-                                                                    [text] => 200
-                                                                    [size] => xl
-                                                                    [align] => center
-                                                                    [weight] => bold
-                                                                    [wrap] => 1
-                                                                )
-
-                                                        )
-
-                                                )
-
-                                            [2] => Array
-                                                (
-                                                    [type] => box
-                                                    [layout] => vertical
-                                                    [contents] => Array
-                                                        (
-                                                            [0] => Array
-                                                                (
-                                                                    [type] => text
-                                                                    [text] => สีขาว ไซต์ s,m,l,xl
-                                                                    [margin] => xl
-                                                                    [size] => xl
-                                                                    [align] => center
-                                                                    [color] => #000000
-                                                                    [wrap] => 1
-                                                                )
-
-                                                        )
-
-                                                )
-
-                                        )
-
-                                )
-
-                        )
-
-                )
-
-        )
-
-);
+foreach($result->[1]type->url as $row){
+    array_push($jsonFlex,"https://websbackend.herokuapp.com/uploads/".$row['product_img']);
+}   
 
 echo json_encode($jsonFlex);
 if (isset($request_array['events']) > 0) {
