@@ -37,12 +37,10 @@ $jsonFlex = [
             ], 
             [
                      "type" => "bubble", 
-                     "direction" => "ltr", 
-                     "hero" => [
+                     "direction" => "ltr",    
+                        "hero" => [
                         "type" => "image", 
-                        foreach($result as $row) {
-                        "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img']
-                       },
+                        "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img'],
                         "align" => "center", 
                         "size" => "full", 
                         "aspectRatio" => "4:3", 
@@ -55,9 +53,7 @@ $jsonFlex = [
                            "contents" => [
                               [
                                  "type" => "text", 
-                                foreach($result as $row) {
-                                 "text" => $row['product_name']
-                                },
+                                 "text" => $row['product_name'],
                                  "size" => "xl", 
                                  "align" => "center", 
                                  "gravity" => "center", 
@@ -70,9 +66,7 @@ $jsonFlex = [
                                     "contents" => [
                                        [
                                           "type" => "text", 
-                                         foreach($result as $row) {
-                                          "text" => $row['product_price']
-                                         },
+                                          "text" => $row['product_price'],
                                           "size" => "xl", 
                                           "align" => "center", 
                                           "weight" => "bold", 
@@ -86,9 +80,7 @@ $jsonFlex = [
                                              "contents" => [
                                                 [
                                                    "type" => "text", 
-                                                  foreach($result as $row) {
-                                                   "text" => $row['product_details']
-                                                  },
+                                                   "text" => $row['product_details'],
                                                    "margin" => "xl", 
                                                    "size" => "xl", 
                                                    "align" => "center", 
