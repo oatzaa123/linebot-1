@@ -46,7 +46,7 @@ $jsonFlex = array (
         'hero' => 
         array (
           'type' => 'image',
-          'url' => '',
+          'url' => "https://websbackend.herokuapp.com/uploads/".$row['product_img'],
           'align' => 'center',
           'size' => 'full',
           'aspectRatio' => '4:3',
@@ -62,7 +62,7 @@ $jsonFlex = array (
             0 => 
             array (
               'type' => 'text',
-              'text' => 'Jeans , Denim color',
+              'text' => $row['product_name'],
               'size' => 'xl',
               'align' => 'center',
               'gravity' => 'center',
@@ -78,7 +78,7 @@ $jsonFlex = array (
                 0 => 
                 array (
                   'type' => 'text',
-                  'text' => '500 Bath',
+                  'text' => $row['product_price'],
                   'size' => 'xl',
                   'align' => 'center',
                   'weight' => 'bold',
@@ -110,10 +110,6 @@ $jsonFlex = array (
     ),
   ),
 );
-
-foreach($result->$jsonFlex[1]->url as $row) {
-  array_push($jsonFlex,"https://websbackend.herokuapp.com/uploads/".$row['product_img']);
-}
 
 echo $jsonFlex;
 if (isset($request_array['events']) > 0) {
