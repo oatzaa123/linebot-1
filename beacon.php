@@ -289,7 +289,7 @@ if (isset($request_array['events']) > 0) {
         $reply_token = $event['replyToken'];
         $data = [
             'replyToken' => $reply_token,
-            'messages' => [$jsonFlex,$jsonFlex1]
+            'messages' => [$jsonFlex,$jsonFlex1,$jsonFlex2]
         ];
         print_r($data);
         $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
