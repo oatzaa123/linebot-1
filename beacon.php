@@ -111,7 +111,7 @@ $jsonFlex = array (
   ),
 );
 
-foreach($result->$jsonFlex[1]->"url" as $row) {
+foreach($result->$jsonFlex[1]->url as $row) {
   array_push($jsonFlex,"https://websbackend.herokuapp.com/uploads/".$row['product_img']);
 }
 
