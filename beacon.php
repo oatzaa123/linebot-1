@@ -109,7 +109,7 @@ $jsonFlex = array (
       ),
     ),
   ),
-)
+);
 
 if (isset($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
