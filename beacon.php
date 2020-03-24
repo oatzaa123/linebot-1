@@ -10,14 +10,12 @@ $POST_HEADER = array('Content-Type: application/json', 'Authorization: Bearer ' 
 $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 var_export($request_array);
-$jsonFlex = [];
 
 $query = "SELECT * FROM product ORDER BY id asc LIMIT 10";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
 
-  foreach($result as $row) {
 $jsonFlex = [
      "type" => "flex", 
    "altText" => "Flex Message", 
@@ -37,6 +35,7 @@ $jsonFlex = [
                   "aspectMode" => "cover" 
                ] 
             ], 
+           foreach($result as $row) {
             [
                      "type" => "bubble", 
                      "direction" => "ltr", 
@@ -89,7 +88,9 @@ $jsonFlex = [
                            ] 
                         ] 
                   ], 
+             }
             [
+              foreach($result as $row) {
                                                       "type" => "bubble", 
                                                       "direction" => "ltr", 
                                                       "hero" => [
@@ -143,8 +144,8 @@ $jsonFlex = [
                                                    ] 
          ] 
       ]   
+              }
 ]; 
-}
 
 echo json_encode($jsonFlex);
 if (isset($request_array['events']) > 0) {
