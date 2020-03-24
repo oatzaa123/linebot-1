@@ -288,8 +288,8 @@ $jsonFlex2 =  array (
 
 echo json_encode($jsonFlex2);
 
-foreach($result2 as $row){
-$jsonFlex2 =  array (
+foreach($result3 as $row){
+$jsonFlex3 =  array (
   'type' => 'flex',
   'altText' => 'Flex Message',
   'contents' => 
@@ -362,7 +362,7 @@ $jsonFlex2 =  array (
   ),
 );
 }
-echo json_encode($jsonFlex2);
+echo json_encode($jsonFlex3);
 
 if (isset($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
