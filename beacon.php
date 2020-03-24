@@ -115,6 +115,7 @@ foreach($result->$jsonFlex[1]->url as $row) {
   array_push($jsonFlex,"https://websbackend.herokuapp.com/uploads/".$row['product_img']);
 }
 
+echo $jsonFlex;
 if (isset($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
         error_log(json_encode($event));
