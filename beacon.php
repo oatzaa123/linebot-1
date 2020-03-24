@@ -13,6 +13,7 @@ var_export($request_array);
 
 $jsonFlex =[];
 $jsonFlex1 = [];
+$jsonFlex2 = [];
 
 $query = "SELECT * FROM product WHERE id = 2";
 $statement = $connect->prepare($query);
@@ -23,6 +24,11 @@ $query1 = "SELECT * FROM product WHERE id = 62";
 $statement1 = $connect->prepare($query1);
 $statement1->execute();
 $result1 = $statement1->fetchAll();
+
+$query2 = "SELECT * FROM product WHERE id = 72";
+$statement2 = $connect->prepare($query2);
+$statement2->execute();
+$result2 = $statement2->fetchAll();
 
 foreach($result as $row){
 $jsonFlex = array (
@@ -199,6 +205,82 @@ $jsonFlex1 =  array (
 
 echo json_encode($jsonFlex1);
 
+foreach($result2 as $row){
+$jsonFlex2 =  array (
+  'type' => 'flex',
+  'altText' => 'Flex Message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'direction' => 'ltr',
+    'hero' => 
+    array (
+      'type' => 'image',
+      'url' => "https://websbackend.herokuapp.com/uploads/".$row['product_img'],
+      'align' => 'center',
+      'size' => 'full',
+      'aspectRatio' => '4:3',
+      'aspectMode' => 'cover',
+    ),
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'spacing' => 'sm',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $row['product_name'],
+          'size' => 'xl',
+          'align' => 'center',
+          'gravity' => 'center',
+          'weight' => 'bold',
+          'wrap' => true,
+        ),
+        1 => 
+        array (
+          'type' => 'box',
+          'layout' => 'baseline',
+          'contents' => 
+          array (
+            0 => 
+            array (
+              'type' => 'text',
+              'text' => $row['product_price'],
+              'size' => 'xl',
+              'align' => 'center',
+              'weight' => 'bold',
+              'wrap' => true,
+            ),
+          ),
+        ),
+        2 => 
+        array (
+          'type' => 'box',
+          'layout' => 'vertical',
+          'contents' => 
+          array (
+            0 => 
+            array (
+              'type' => 'text',
+              'text' => $row['product_details'],
+              'margin' => 'xl',
+              'size' => 'xl',
+              'align' => 'center',
+              'color' => '#000000',
+              'wrap' => true,
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+);
+}
+
+echo json_encode($jsonFlex2);
 
 if (isset($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
