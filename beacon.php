@@ -11,15 +11,10 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 var_export($request_array);
 
-$query = "SELECT * FROM product WHERE id = 2";
+$query = "SELECT * FROM product";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
-
-$query1 = "SELECT * FROM product WHERE id = 12";
-$statement1 = $connect->prepare($query1);
-$statement1->execute();
-$result1 = $statement1->fetchAll();
 
 $jsonFlex = [
      "type" => "flex", 
@@ -45,9 +40,9 @@ $jsonFlex = [
                      "direction" => "ltr", 
                      "hero" => [
                         "type" => "image", 
-                       foreach($result as $row) {
+                       <?php foreach($result as $row) {
                         "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img'], 
-                       }
+                       } ?>
                         "align" => "center", 
                         "size" => "full", 
                         "aspectRatio" => "4:3", 
@@ -60,9 +55,9 @@ $jsonFlex = [
                            "contents" => [
                               [
                                  "type" => "text", 
-                                foreach($result as $row) {
+                                <?php foreach($result as $row) {
                                  "text" => $row['product_name'], 
-                                }
+                                } ?>
                                  "size" => "xl", 
                                  "align" => "center", 
                                  "gravity" => "center", 
@@ -75,9 +70,9 @@ $jsonFlex = [
                                     "contents" => [
                                        [
                                           "type" => "text", 
-                                         foreach($result as $row) {
+                                         <?php foreach($result as $row) {
                                           "text" => $row['product_price'], 
-                                         }
+                                         } ?>
                                           "size" => "xl", 
                                           "align" => "center", 
                                           "weight" => "bold", 
@@ -91,9 +86,9 @@ $jsonFlex = [
                                              "contents" => [
                                                 [
                                                    "type" => "text", 
-                                                  foreach($result as $row) {
+                                                  <?php foreach($result as $row) {
                                                    "text" => $row['product_details'], 
-                                                  }
+                                                  } ?>
                                                    "margin" => "xl", 
                                                    "size" => "xl", 
                                                    "align" => "center", 
