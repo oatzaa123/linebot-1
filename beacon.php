@@ -120,18 +120,10 @@ $jsonFlex = array (
   ),
 );
 }
+echo json_encode($jsonFlex);
 
 foreach($result1 as $row){
-$jsonFlex1 = array (
-  'type' => 'flex',
-  'altText' => 'Flex Message',
-  'contents' => 
-  array (
-    'type' => 'carousel',
-    'contents' => 
-    array (
-      0 => 
-      array (
+$jsonFlex1 =  array (
         'type' => 'bubble',
         'direction' => 'ltr',
         'hero' => 
@@ -203,9 +195,6 @@ $jsonFlex1 = array (
 );
 }
 
-
-
-echo json_encode($jsonFlex);
 echo json_encode($jsonFlex1);
 
 
