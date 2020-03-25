@@ -80,7 +80,7 @@ $jsonFlex = array (
         'hero' => 
         array (
           'type' => 'image',
-          'url' => "https://websbackend.herokuapp.com/uploads/".$row['product_img'],
+          'url' => 'https://websbackend.herokuapp.com/uploads/'.$row['product_img'],
           'align' => 'center',
           'size' => 'full',
           'aspectRatio' => '4:3',
