@@ -15,6 +15,7 @@ $jsonFlex =[];
 $jsonFlex1 = [];
 $jsonFlex2 = [];
 $jsonFlex3 = [];
+$jsonFlex4 = [];
 
 $query = "SELECT * FROM product WHERE id = 2";
 $statement = $connect->prepare($query);
