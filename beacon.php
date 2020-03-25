@@ -16,6 +16,9 @@ $jsonFlex1 = [];
 $jsonFlex2 = [];
 $jsonFlex3 = [];
 $jsonFlex4 = [];
+$jsonFlex5 = [];
+$jsonFlex6 = [];
+$jsonFlex7 = [];
 
 $query = "SELECT * FROM product WHERE id = 2";
 $statement = $connect->prepare($query);
@@ -41,6 +44,22 @@ $query4 = "SELECT * FROM product WHERE id = 122";
 $statement4 = $connect->prepare($query4);
 $statement4->execute();
 $result4 = $statement4->fetchAll();
+
+$query5 = "SELECT * FROM product WHERE id = 122";
+$statement5 = $connect->prepare($query5);
+$statement5->execute();
+$result5 = $statement5->fetchAll();
+
+$query6 = "SELECT * FROM product WHERE id = 132";
+$statement6 = $connect->prepare($query6);
+$statement6->execute();
+$result6 = $statement6->fetchAll();
+
+$query7 = "SELECT * FROM product WHERE id = 142";
+$statement7 = $connect->prepare($query7);
+$statement7->execute();
+$result7 = $statement7->fetchAll();
+
 
 foreach($result as $row){
 $jsonFlex = array (
@@ -447,6 +466,238 @@ $jsonFlex4 =  array (
 
 echo json_encode($jsonFlex4);
 
+foreach($result5 as $row){
+$jsonFlex5 =  array (
+  'type' => 'flex',
+  'altText' => 'Flex Message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'direction' => 'ltr',
+    'hero' => 
+    array (
+      'type' => 'image',
+      'url' => "https://websbackend.herokuapp.com/uploads/".$row['product_img'],
+      'align' => 'center',
+      'size' => 'full',
+      'aspectRatio' => '4:3',
+      'aspectMode' => 'cover',
+    ),
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'spacing' => 'sm',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $row['product_name'],
+          'size' => 'xl',
+          'align' => 'center',
+          'gravity' => 'center',
+          'weight' => 'bold',
+          'wrap' => true,
+        ),
+        1 => 
+        array (
+          'type' => 'box',
+          'layout' => 'baseline',
+          'contents' => 
+          array (
+            0 => 
+            array (
+              'type' => 'text',
+              'text' => $row['product_price'],
+              'size' => 'xl',
+              'align' => 'center',
+              'weight' => 'bold',
+              'wrap' => true,
+            ),
+          ),
+        ),
+        2 => 
+        array (
+          'type' => 'box',
+          'layout' => 'vertical',
+          'contents' => 
+          array (
+            0 => 
+            array (
+              'type' => 'text',
+              'text' => $row['product_details'],
+              'margin' => 'xl',
+              'size' => 'xl',
+              'align' => 'center',
+              'color' => '#000000',
+              'wrap' => true,
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+);
+}
+
+echo json_encode($jsonFlex5);
+
+foreach($result6 as $row){
+$jsonFlex6 =  array (
+  'type' => 'flex',
+  'altText' => 'Flex Message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'direction' => 'ltr',
+    'hero' => 
+    array (
+      'type' => 'image',
+      'url' => "https://websbackend.herokuapp.com/uploads/".$row['product_img'],
+      'align' => 'center',
+      'size' => 'full',
+      'aspectRatio' => '4:3',
+      'aspectMode' => 'cover',
+    ),
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'spacing' => 'sm',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $row['product_name'],
+          'size' => 'xl',
+          'align' => 'center',
+          'gravity' => 'center',
+          'weight' => 'bold',
+          'wrap' => true,
+        ),
+        1 => 
+        array (
+          'type' => 'box',
+          'layout' => 'baseline',
+          'contents' => 
+          array (
+            0 => 
+            array (
+              'type' => 'text',
+              'text' => $row['product_price'],
+              'size' => 'xl',
+              'align' => 'center',
+              'weight' => 'bold',
+              'wrap' => true,
+            ),
+          ),
+        ),
+        2 => 
+        array (
+          'type' => 'box',
+          'layout' => 'vertical',
+          'contents' => 
+          array (
+            0 => 
+            array (
+              'type' => 'text',
+              'text' => $row['product_details'],
+              'margin' => 'xl',
+              'size' => 'xl',
+              'align' => 'center',
+              'color' => '#000000',
+              'wrap' => true,
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+);
+}
+
+echo json_encode($jsonFlex6);
+
+foreach($result7 as $row){
+$jsonFlex7 =  array (
+  'type' => 'flex',
+  'altText' => 'Flex Message',
+  'contents' => 
+  array (
+    'type' => 'bubble',
+    'direction' => 'ltr',
+    'hero' => 
+    array (
+      'type' => 'image',
+      'url' => "https://websbackend.herokuapp.com/uploads/".$row['product_img'],
+      'align' => 'center',
+      'size' => 'full',
+      'aspectRatio' => '4:3',
+      'aspectMode' => 'cover',
+    ),
+    'body' => 
+    array (
+      'type' => 'box',
+      'layout' => 'vertical',
+      'spacing' => 'sm',
+      'contents' => 
+      array (
+        0 => 
+        array (
+          'type' => 'text',
+          'text' => $row['product_name'],
+          'size' => 'xl',
+          'align' => 'center',
+          'gravity' => 'center',
+          'weight' => 'bold',
+          'wrap' => true,
+        ),
+        1 => 
+        array (
+          'type' => 'box',
+          'layout' => 'baseline',
+          'contents' => 
+          array (
+            0 => 
+            array (
+              'type' => 'text',
+              'text' => $row['product_price'],
+              'size' => 'xl',
+              'align' => 'center',
+              'weight' => 'bold',
+              'wrap' => true,
+            ),
+          ),
+        ),
+        2 => 
+        array (
+          'type' => 'box',
+          'layout' => 'vertical',
+          'contents' => 
+          array (
+            0 => 
+            array (
+              'type' => 'text',
+              'text' => $row['product_details'],
+              'margin' => 'xl',
+              'size' => 'xl',
+              'align' => 'center',
+              'color' => '#000000',
+              'wrap' => true,
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+);
+}
+
+echo json_encode($jsonFlex7);
+
+
 if (isset($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
         error_log(json_encode($event));
@@ -454,7 +705,7 @@ if (isset($request_array['events']) > 0) {
         $reply_token = $event['replyToken'];
         $data = [
             'replyToken' => $reply_token,
-            'messages' => [$jsonFlex,$jsonFlex1,$jsonFlex2,$jsonFlex3,$jsonFlex4]
+            'messages' => [$jsonFlex,$jsonFlex1,$jsonFlex2,$jsonFlex3,$jsonFlex4,$jsonFlex5,$jsonFlex6,$jsonFlex7]
         ];
         print_r($data);
         $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
