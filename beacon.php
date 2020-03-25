@@ -25,22 +25,22 @@ $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
 
-$query1 = "SELECT * FROM product WHERE id = 62";
+$query1 = "SELECT * FROM product WHERE id = 12";
 $statement1 = $connect->prepare($query1);
 $statement1->execute();
 $result1 = $statement1->fetchAll();
 
-$query2 = "SELECT * FROM product WHERE id = 72";
+$query2 = "SELECT * FROM product WHERE id = 62";
 $statement2 = $connect->prepare($query2);
 $statement2->execute();
 $result2 = $statement2->fetchAll();
 
-$query3 = "SELECT * FROM product WHERE id = 82";
+$query3 = "SELECT * FROM product WHERE id = 72";
 $statement3 = $connect->prepare($query3);
 $statement3->execute();
 $result3 = $statement3->fetchAll();
 
-$query4 = "SELECT * FROM product WHERE id = 122";
+$query4 = "SELECT * FROM product WHERE id = 82";
 $statement4 = $connect->prepare($query4);
 $statement4->execute();
 $result4 = $statement4->fetchAll();
