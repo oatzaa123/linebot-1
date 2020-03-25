@@ -40,7 +40,7 @@ $result3 = $statement3->fetchAll();
 $query4 = "SELECT * FROM product WHERE id = 122";
 $statement4 = $connect->prepare($query4);
 $statement4->execute();
-$result4 = $statement3->fetchAll();
+$result4 = $statement4->fetchAll();
 
 foreach($result as $row){
 $jsonFlex = array (
