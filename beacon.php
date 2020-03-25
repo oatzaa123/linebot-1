@@ -16,7 +16,6 @@ $jsonFlex1 = [];
 $jsonFlex2 = [];
 $jsonFlex3 = [];
 $jsonFlex4 = [];
-$jsonFlex5 = [];
 
 $query = "SELECT * FROM product WHERE id = 2";
 $statement = $connect->prepare($query);
@@ -43,7 +42,7 @@ $statement4 = $connect->prepare($query4);
 $statement4->execute();
 $result4 = $statement4->fetchAll();
 
-$query5 = "SELECT * FROM product;
+$query5 = "SELECT * FROM product WHERE id = 143;
 $statement5 = $connect->prepare($query5);
 $statement5->execute();
 $result5 = $statement5->fetchAll();
