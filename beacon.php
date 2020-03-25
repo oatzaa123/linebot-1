@@ -42,12 +42,6 @@ $statement4 = $connect->prepare($query4);
 $statement4->execute();
 $result4 = $statement4->fetchAll();
 
-$query5 = "SELECT * FROM product WHERE id = 143;
-$statement5 = $connect->prepare($query5);
-$statement5->execute();
-$result5 = $statement5->fetchAll();
-
-
 foreach($result as $row){
 $jsonFlex = array (
   'type' => 'flex',
