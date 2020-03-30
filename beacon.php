@@ -131,7 +131,7 @@ $jsonFlex1 = [
          "direction" => "ltr", 
          "hero" => [
             "type" => "image", 
-            "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+            "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img'], 
             "size" => "full", 
             "aspectRatio" => "20:13", 
             "aspectMode" => "cover" 
@@ -143,7 +143,7 @@ $jsonFlex1 = [
                "contents" => [
                   [
                      "type" => "text", 
-                     "text" => "Jeans , Denim color", 
+                     "text" => $row['product_name'], 
                      "size" => "xl", 
                      "align" => "center", 
                      "gravity" => "center", 
@@ -156,7 +156,7 @@ $jsonFlex1 = [
                         "contents" => [
                            [
                               "type" => "text", 
-                              "text" => "500 Bath", 
+                              "text" => $row['product_price'], 
                               "size" => "xl", 
                               "align" => "center", 
                               "weight" => "bold", 
@@ -173,7 +173,7 @@ $jsonFlex1 = [
                                  "contents" => [
                                     [
                                        "type" => "text", 
-                                       "text" => "Text", 
+                                       "text" => $row['product_details'], 
                                        "size" => "xl", 
                                        "align" => "center" 
                                     ] 
@@ -193,7 +193,7 @@ $jsonFlex2 = [
          "direction" => "ltr", 
          "hero" => [
             "type" => "image", 
-            "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+            "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img'], 
             "size" => "full", 
             "aspectRatio" => "20:13", 
             "aspectMode" => "cover" 
@@ -205,7 +205,7 @@ $jsonFlex2 = [
                "contents" => [
                   [
                      "type" => "text", 
-                     "text" => "Jeans , Denim color", 
+                     "text" => $row['product_name'], 
                      "size" => "xl", 
                      "align" => "center", 
                      "gravity" => "center", 
@@ -218,7 +218,7 @@ $jsonFlex2 = [
                         "contents" => [
                            [
                               "type" => "text", 
-                              "text" => "500 Bath", 
+                              "text" => $row['product_price'], 
                               "size" => "xl", 
                               "align" => "center", 
                               "weight" => "bold", 
@@ -235,7 +235,7 @@ $jsonFlex2 = [
                                  "contents" => [
                                     [
                                        "type" => "text", 
-                                       "text" => "Text", 
+                                       "text" => $row['product_details'], 
                                        "size" => "xl", 
                                        "align" => "center" 
                                     ] 
@@ -255,7 +255,7 @@ $jsonFlex3 = [
          "direction" => "ltr", 
          "hero" => [
             "type" => "image", 
-            "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+            "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img'], 
             "size" => "full", 
             "aspectRatio" => "20:13", 
             "aspectMode" => "cover" 
@@ -267,7 +267,7 @@ $jsonFlex3 = [
                "contents" => [
                   [
                      "type" => "text", 
-                     "text" => "Jeans , Denim color", 
+                     "text" => $row['product_name'], 
                      "size" => "xl", 
                      "align" => "center", 
                      "gravity" => "center", 
@@ -280,7 +280,7 @@ $jsonFlex3 = [
                         "contents" => [
                            [
                               "type" => "text", 
-                              "text" => "500 Bath", 
+                              "text" => $row['product_price'], 
                               "size" => "xl", 
                               "align" => "center", 
                               "weight" => "bold", 
@@ -297,7 +297,7 @@ $jsonFlex3 = [
                                  "contents" => [
                                     [
                                        "type" => "text", 
-                                       "text" => "Text", 
+                                       "text" => $row['product_details'], 
                                        "size" => "xl", 
                                        "align" => "center" 
                                     ] 
@@ -317,7 +317,7 @@ $jsonFlex4 = [
          "direction" => "ltr", 
          "hero" => [
             "type" => "image", 
-            "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+            "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img'], 
             "size" => "full", 
             "aspectRatio" => "20:13", 
             "aspectMode" => "cover" 
@@ -329,7 +329,7 @@ $jsonFlex4 = [
                "contents" => [
                   [
                      "type" => "text", 
-                     "text" => "Jeans , Denim color", 
+                     "text" => $row['product_name'], 
                      "size" => "xl", 
                      "align" => "center", 
                      "gravity" => "center", 
@@ -342,7 +342,7 @@ $jsonFlex4 = [
                         "contents" => [
                            [
                               "type" => "text", 
-                              "text" => "500 Bath", 
+                              "text" => $row['product_price'], 
                               "size" => "xl", 
                               "align" => "center", 
                               "weight" => "bold", 
@@ -359,7 +359,7 @@ $jsonFlex4 = [
                                  "contents" => [
                                     [
                                        "type" => "text", 
-                                       "text" => "Text", 
+                                       "text" => $row['product_details'], 
                                        "size" => "xl", 
                                        "align" => "center" 
                                     ] 
