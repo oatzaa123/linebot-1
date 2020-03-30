@@ -26,20 +26,20 @@ $statement1 = $connect->prepare($query1);
 $statement1->execute();
 $result1 = $statement1->fetchAll();
 
-$query = "SELECT * FROM product WHERE id = 62";
-$statement = $connect->prepare($query);
-$statement->execute();
-$result = $statement->fetchAll();
+$query2 = "SELECT * FROM product WHERE id = 62";
+$statement2 = $connect->prepare($query2);
+$statement2->execute();
+$result2 = $statement2->fetchAll();
 
-$query = "SELECT * FROM product WHERE id = 72";
-$statement = $connect->prepare($query);
-$statement->execute();
-$result = $statement->fetchAll();
+$query3 = "SELECT * FROM product WHERE id = 72";
+$statement3 = $connect->prepare($query3);
+$statement3->execute();
+$result3 = $statement3->fetchAll();
 
-$query = "SELECT * FROM product WHERE id = 252";
-$statement = $connect->prepare($query);
-$statement->execute();
-$result = $statement->fetchAll();
+$query4 = "SELECT * FROM product WHERE id = 252";
+$statement4 = $connect->prepare($query4);
+$statement4->execute();
+$result4 = $statement4->fetchAll();
 
   foreach($result as $row) {
 $jsonFlex = [
