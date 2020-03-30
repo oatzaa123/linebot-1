@@ -181,7 +181,7 @@ $jsonFlex1 = [
                               ] 
       ] 
 ]; 
-  
+}
 echo json_encode($jsonFlex1);
   
   foreach($result2 as $row) {
@@ -243,7 +243,7 @@ $jsonFlex2 = [
                               ] 
       ] 
 ]; 
-  
+} 
 echo json_encode($jsonFlex2);
     
     foreach($result3 as $row) {
@@ -305,7 +305,7 @@ $jsonFlex3 = [
                               ] 
       ] 
 ]; 
-  
+}
 echo json_encode($jsonFlex3);
       
       foreach($result4 as $row) {
@@ -367,7 +367,7 @@ $jsonFlex4 = [
                               ] 
       ] 
 ]; 
-  
+}
 echo json_encode($jsonFlex4);
 if (isset($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
