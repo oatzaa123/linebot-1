@@ -11,15 +11,39 @@ $request = file_get_contents('php://input');   // Get request content
 $request_array = json_decode($request, true);   // Decode JSON to Array
 var_export($request_array);
 $jsonFlex = [];
+$jsonFlex1 = [];
+$jsonFlex2 = [];
+$jsonFlex3 = [];
+$jsonFlex4 = [];
 
-$query = "SELECT * FROM product ORDER BY id asc LIMIT 10";
+$query = "SELECT * FROM product WHERE id = 2";
+$statement = $connect->prepare($query);
+$statement->execute();
+$result = $statement->fetchAll();
+
+$query1 = "SELECT * FROM product WHERE id = 12";
+$statement1 = $connect->prepare($query1);
+$statement1->execute();
+$result1 = $statement1->fetchAll();
+
+$query = "SELECT * FROM product WHERE id = 62";
+$statement = $connect->prepare($query);
+$statement->execute();
+$result = $statement->fetchAll();
+
+$query = "SELECT * FROM product WHERE id = 72";
+$statement = $connect->prepare($query);
+$statement->execute();
+$result = $statement->fetchAll();
+
+$query = "SELECT * FROM product WHERE id = 252";
 $statement = $connect->prepare($query);
 $statement->execute();
 $result = $statement->fetchAll();
 
   foreach($result as $row) {
 $jsonFlex = [
-     "type" => "flex", 
+   "type" => "flex", 
    "altText" => "Flex Message", 
    "contents" => [
          "type" => "carousel", 
@@ -44,7 +68,7 @@ $jsonFlex = [
                         "type" => "image", 
                         "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img'], 
                         "size" => "full", 
-                        "aspectRatio" => "4:3", 
+                        "aspectRatio" => "20:13", 
                         "aspectMode" => "cover" 
                      ], 
                      "body" => [
@@ -74,79 +98,277 @@ $jsonFlex = [
                                           "wrap" => true 
                                        ] 
                                     ] 
-                                 ], 
-                              [
+                                 ] 
+                           ] 
+                        ], 
+                     "footer" => [
                                              "type" => "box", 
                                              "layout" => "vertical", 
+                                             "spacing" => "sm", 
                                              "contents" => [
                                                 [
                                                    "type" => "text", 
                                                    "text" => $row['product_details'], 
+                                                   "size" => "xl", 
                                                    "align" => "center" 
                                                 ] 
                                              ] 
                                           ] 
-                           ] 
-                        ] 
-                  ], 
-            [
-                                                      "type" => "bubble", 
-                                                      "direction" => "ltr", 
-                                                      "hero" => [
-                                                         "type" => "image", 
-                                                         "url" => "https://websbackend.herokuapp.com/uploads/".$row['product_img'], 
-                                                         "size" => "full", 
-                                                         "aspectRatio" => "4:3", 
-                                                         "aspectMode" => "cover" 
-                                                      ], 
-                                                      "body" => [
-                                                            "type" => "box", 
-                                                            "layout" => "vertical", 
-                                                            "spacing" => "sm", 
-                                                            "contents" => [
-                                                               [
-                                                                  "type" => "text", 
-                                                                  "text" => $row['product_name'], 
-                                                                  "size" => "xl", 
-                                                                  "align" => "center", 
-                                                                  "gravity" => "center", 
-                                                                  "weight" => "bold", 
-                                                                  "wrap" => true 
-                                                               ], 
-                                                               [
-                                                                     "type" => "box", 
-                                                                     "layout" => "baseline", 
-                                                                     "contents" => [
-                                                                        [
-                                                                           "type" => "text", 
-                                                                           "text" => $row['product_price'], 
-                                                                           "size" => "xl", 
-                                                                           "align" => "center", 
-                                                                           "weight" => "bold", 
-                                                                           "wrap" => true 
-                                                                        ] 
-                                                                     ] 
-                                                                  ], 
-                                                               [
-                                                                              "type" => "box", 
-                                                                              "layout" => "vertical", 
-                                                                              "contents" => [
-                                                                                 [
-                                                                                    "type" => "text", 
-                                                                                    "text" => $row['product_details'], 
-                                                                                    "align" => "center" 
-                                                                                 ] 
-                                                                              ] 
-                                                                           ] 
-                                                            ] 
-                                                         ] 
-                                                   ] 
+                  ] 
          ] 
-      ]   
+      ] 
 ]; 
 }
 
 echo json_encode($jsonFlex);
+
+foreach($result1 as $row) {
+$jsonFlex1 = [
+   "type" => "flex", 
+   "altText" => "Flex Message", 
+   "contents" => [
+         "type" => "bubble", 
+         "direction" => "ltr", 
+         "hero" => [
+            "type" => "image", 
+            "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+            "size" => "full", 
+            "aspectRatio" => "20:13", 
+            "aspectMode" => "cover" 
+         ], 
+         "body" => [
+               "type" => "box", 
+               "layout" => "vertical", 
+               "spacing" => "sm", 
+               "contents" => [
+                  [
+                     "type" => "text", 
+                     "text" => "Jeans , Denim color", 
+                     "size" => "xl", 
+                     "align" => "center", 
+                     "gravity" => "center", 
+                     "weight" => "bold", 
+                     "wrap" => true 
+                  ], 
+                  [
+                        "type" => "box", 
+                        "layout" => "baseline", 
+                        "contents" => [
+                           [
+                              "type" => "text", 
+                              "text" => "500 Bath", 
+                              "size" => "xl", 
+                              "align" => "center", 
+                              "weight" => "bold", 
+                              "wrap" => true 
+                           ] 
+                        ] 
+                     ] 
+               ] 
+            ], 
+         "footer" => [
+                                 "type" => "box", 
+                                 "layout" => "vertical", 
+                                 "spacing" => "sm", 
+                                 "contents" => [
+                                    [
+                                       "type" => "text", 
+                                       "text" => "Text", 
+                                       "size" => "xl", 
+                                       "align" => "center" 
+                                    ] 
+                                 ] 
+                              ] 
+      ] 
+]; 
+  
+echo json_encode($jsonFlex1);
+  
+  foreach($result2 as $row) {
+$jsonFlex2 = [
+   "type" => "flex", 
+   "altText" => "Flex Message", 
+   "contents" => [
+         "type" => "bubble", 
+         "direction" => "ltr", 
+         "hero" => [
+            "type" => "image", 
+            "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+            "size" => "full", 
+            "aspectRatio" => "20:13", 
+            "aspectMode" => "cover" 
+         ], 
+         "body" => [
+               "type" => "box", 
+               "layout" => "vertical", 
+               "spacing" => "sm", 
+               "contents" => [
+                  [
+                     "type" => "text", 
+                     "text" => "Jeans , Denim color", 
+                     "size" => "xl", 
+                     "align" => "center", 
+                     "gravity" => "center", 
+                     "weight" => "bold", 
+                     "wrap" => true 
+                  ], 
+                  [
+                        "type" => "box", 
+                        "layout" => "baseline", 
+                        "contents" => [
+                           [
+                              "type" => "text", 
+                              "text" => "500 Bath", 
+                              "size" => "xl", 
+                              "align" => "center", 
+                              "weight" => "bold", 
+                              "wrap" => true 
+                           ] 
+                        ] 
+                     ] 
+               ] 
+            ], 
+         "footer" => [
+                                 "type" => "box", 
+                                 "layout" => "vertical", 
+                                 "spacing" => "sm", 
+                                 "contents" => [
+                                    [
+                                       "type" => "text", 
+                                       "text" => "Text", 
+                                       "size" => "xl", 
+                                       "align" => "center" 
+                                    ] 
+                                 ] 
+                              ] 
+      ] 
+]; 
+  
+echo json_encode($jsonFlex2);
+    
+    foreach($result3 as $row) {
+$jsonFlex3 = [
+   "type" => "flex", 
+   "altText" => "Flex Message", 
+   "contents" => [
+         "type" => "bubble", 
+         "direction" => "ltr", 
+         "hero" => [
+            "type" => "image", 
+            "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+            "size" => "full", 
+            "aspectRatio" => "20:13", 
+            "aspectMode" => "cover" 
+         ], 
+         "body" => [
+               "type" => "box", 
+               "layout" => "vertical", 
+               "spacing" => "sm", 
+               "contents" => [
+                  [
+                     "type" => "text", 
+                     "text" => "Jeans , Denim color", 
+                     "size" => "xl", 
+                     "align" => "center", 
+                     "gravity" => "center", 
+                     "weight" => "bold", 
+                     "wrap" => true 
+                  ], 
+                  [
+                        "type" => "box", 
+                        "layout" => "baseline", 
+                        "contents" => [
+                           [
+                              "type" => "text", 
+                              "text" => "500 Bath", 
+                              "size" => "xl", 
+                              "align" => "center", 
+                              "weight" => "bold", 
+                              "wrap" => true 
+                           ] 
+                        ] 
+                     ] 
+               ] 
+            ], 
+         "footer" => [
+                                 "type" => "box", 
+                                 "layout" => "vertical", 
+                                 "spacing" => "sm", 
+                                 "contents" => [
+                                    [
+                                       "type" => "text", 
+                                       "text" => "Text", 
+                                       "size" => "xl", 
+                                       "align" => "center" 
+                                    ] 
+                                 ] 
+                              ] 
+      ] 
+]; 
+  
+echo json_encode($jsonFlex3);
+      
+      foreach($result4 as $row) {
+$jsonFlex4 = [
+   "type" => "flex", 
+   "altText" => "Flex Message", 
+   "contents" => [
+         "type" => "bubble", 
+         "direction" => "ltr", 
+         "hero" => [
+            "type" => "image", 
+            "url" => "https://sv1.picz.in.th/images/2020/01/14/RgFCFQ.jpg", 
+            "size" => "full", 
+            "aspectRatio" => "20:13", 
+            "aspectMode" => "cover" 
+         ], 
+         "body" => [
+               "type" => "box", 
+               "layout" => "vertical", 
+               "spacing" => "sm", 
+               "contents" => [
+                  [
+                     "type" => "text", 
+                     "text" => "Jeans , Denim color", 
+                     "size" => "xl", 
+                     "align" => "center", 
+                     "gravity" => "center", 
+                     "weight" => "bold", 
+                     "wrap" => true 
+                  ], 
+                  [
+                        "type" => "box", 
+                        "layout" => "baseline", 
+                        "contents" => [
+                           [
+                              "type" => "text", 
+                              "text" => "500 Bath", 
+                              "size" => "xl", 
+                              "align" => "center", 
+                              "weight" => "bold", 
+                              "wrap" => true 
+                           ] 
+                        ] 
+                     ] 
+               ] 
+            ], 
+         "footer" => [
+                                 "type" => "box", 
+                                 "layout" => "vertical", 
+                                 "spacing" => "sm", 
+                                 "contents" => [
+                                    [
+                                       "type" => "text", 
+                                       "text" => "Text", 
+                                       "size" => "xl", 
+                                       "align" => "center" 
+                                    ] 
+                                 ] 
+                              ] 
+      ] 
+]; 
+  
+echo json_encode($jsonFlex4);
 if (isset($request_array['events']) > 0) {
     foreach ($request_array['events'] as $event) {
         error_log(json_encode($event));
@@ -154,7 +376,7 @@ if (isset($request_array['events']) > 0) {
         $reply_token = $event['replyToken'];
         $data = [
             'replyToken' => $reply_token,
-            'messages' => [$jsonFlex]
+            'messages' => [$jsonFlex,$jsonFlex1,$jsonFlex2,$jsonFlex3,$jsonFlex4]
         ];
         print_r($data);
         $post_body = json_encode($data, JSON_UNESCAPED_UNICODE);
